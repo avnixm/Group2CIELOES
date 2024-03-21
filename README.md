@@ -26,10 +26,18 @@ and engaging content.</h3>
     <li>Vocabulary Page</li>
     <li>Word of the day</li>
   </ul>
-  <li>Practice Page (Speaking and Listening about the words you learn at the learning page)</li>
-  <li>Leaderboards Page (based on who have the highest XP)</li>
-  <li>Shop Page (you can exchange your XP to hearts here)</li>
+  <li>Practice Page</li>
+  <li>Leaderboards Page</li>
+  <li>Shop Page</li>
   <li>Profile Page</li>
-  <li>XP system (Score for every right answer)</li>
-  <li>Heart system (you lose heart for every wrong answer)</li>
+</ul>
+
+<h2>Planned but not started</h2>
+<ul>
+  <li>Speaking and Listening about the words you learn at the learning page</li>
+  <li>XP System</li>
+  <li>Heart Systen</li>
+  <li>XP Exchange to heart in shop</li>
+  <li>Leaderboards based on the users XP</li>
+  <li>Responsiveness to different screen sizes</li>
 </ul>
