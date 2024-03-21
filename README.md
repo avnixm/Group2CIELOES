@@ -20,16 +20,16 @@ and engaging content.</h3>
 
 <ul>
   <li>Dashboard Sidebar</li>
-  <li>Learning Page</li>
+  <li>Learning Page - Nikka's</li>
   <ul>
     <li>Grammar Page</li>
     <li>Vocabulary Page</li>
     <li>Word of the day</li>
   </ul>
-  <li>Practice Page</li>
-  <li>Leaderboards Page</li>
-  <li>Shop Page</li>
-  <li>Profile Page</li>
+  <li>Practice Page - Allyssa's</li>
+  <li>Leaderboards Page - MJ's</li>
+  <li>Shop Page - Maja's</li>
+  <li>Profile Page - Benjie's</li>
 </ul>
 
 <h2>Planned but not started</h2>
