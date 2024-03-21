@@ -1,7 +1,7 @@
 <h1>CIELOES (Computer Instructed English Lessons for OLSHCO Elementary Students)</h1>
 
 <h3>CIELOES is a web application designed to provide English language lessons tailored specifically for OLSHCO elementary students. 
-With a responsive and user-friendly approach, CIELOES aims to enhance the learning experience of students by offering interactive
+With a responsive and user-friendly approach, CIELOES aims to enhance the learning experience and inspire a lifelong love for learning of  students by offering interactive
 and engaging content.</h3>
 
 <h2>Current Features</h2>
@@ -36,7 +36,7 @@ and engaging content.</h3>
 <ul>
   <li>Speaking and Listening about the words you learn at the learning page</li>
   <li>XP System</li>
-  <li>Heart Systen</li>
+  <li>Heart System</li>
   <li>XP Exchange to heart in shop</li>
   <li>Leaderboards based on the users XP</li>
   <li>Responsiveness to different screen sizes</li>
