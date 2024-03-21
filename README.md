@@ -14,3 +14,22 @@ and engaging content.</h3>
   <li>Sign Up Functionality: Backend functionality securely stores user data upon registration.</li>
   <li>Login Functionality: A secure authentication system verifies user credentials and grants access to the platform's features.</li>
 </ul>
+
+
+<h2>What we're working on</h2>
+
+<ul>
+  <li>Dashboard Sidebar</li>
+  <li>Learning Page</li>
+  <ul>
+    <li>Grammar Page</li>
+    <li>Vocabulary Page</li>
+    <li>Word of the day</li>
+  </ul>
+  <li>Practice Page (Speaking and Listening about the words you learn at the learning page)</li>
+  <li>Leaderboards Page (based on who have the highest XP)</li>
+  <li>Shop Page (you can exchange your XP to hearts here)</li>
+  <li>Profile Page</li>
+  <li>XP system (Score for every right answer)</li>
+  <li>Heart system (you lose heart for every wrong answer)</li>
+</ul>
