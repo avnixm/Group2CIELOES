@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="practice.aspx.cs"Practice.aspx.cs="WebApplication1.practice" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="practice.aspx.cs"Practice.aspx.cs="Group2CIELOES.practice" %>
 
 <!DOCTYPE html>
 
