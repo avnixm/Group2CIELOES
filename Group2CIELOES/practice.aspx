@@ -7,6 +7,23 @@
     <title>Practice</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="practice.css" />
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let next = document.querySelector('.next');
+            let prev = document.querySelector('.prev');
+
+            next.addEventListener('click', function () {
+                let items = document.querySelectorAll('.item');
+                document.querySelector('.slide').appendChild(items[0]);
+            });
+
+            prev.addEventListener('click', function () {
+                let items = document.querySelectorAll('.item');
+                document.querySelector('.slide').prepend(items[items.length - 1]);
+            });
+        });
+    </script>
+
 </head>
 <body>
     <form id="form1" runat="server">
