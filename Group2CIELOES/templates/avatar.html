@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avatar Generator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Avatar Generator</h1>
+    <form id="avatar-form">
+        <!-- Avatar options -->
+       
+        Background Color:
+        <select id="background_color" name="background_color">
+            <option value="#65C9FF">Default</option>
+            <option value="#262E33">Black</option>
+            <option value="#FFFFFF">White</option>
+            <option value="#FFD700">Gold</option>
+            <option value="#00FFFFFF">TRANSPARENT</option>
+
+        </select>
+        <br>
+        Hair Type:
+        <select id="hair_type" name="hair_type">
+            <option value="caesar">Caesar</option>
+            <option value="caesar_side_part">Caesar Side Part</option>
+            <option value="no_hair">None</option>
+            <option value="big_hair">Big Hair</option>
+            <option value="bob">Bob</option>
+            <option value="bun">Bun</option>
+            <option value="curly">Curly</option>
+            <option value="curvy">Curvy</option>
+            <option value="dreads">Dreads</option>
+            <option value="frida">Frida</option>
+            <option value="frizzle">Frizzle</option>
+            <option value="fro_band">Fro Band</option>
+            <option value="fro">Fro</option>
+            <option value="long_not_too_long">Long Not Too Long</option>
+            <option value="mia_wallace">Mia Wallace</option>
+            <option value="shaggy_mullet">Shaggy Mullet</option>
+            <option value="shaggy">Shaggy</option>
+            <option value="shaved_sides">Shaved Sides</option>
+            <option value="short_curly">Short Curly</option>
+            <option value="short_dreads_1">Short Dreads 1</option>
+            <option value="short_dreads_2">Short Dreads 2</option>
+            <option value="short_flat">Short Flat</option>
+            <option value="short_round">Short Round</option>
+            <option value="short_waved">Short Waved</option>
+            <option value="sides">Sides</option>
+            <option value="straight_1">Straight 1</option>
+            <option value="straight_2">Straight 2</option>
+            <option value="straight_strand">Straight Strand</option>
+            <option value="astronout">Astronaut</option>
+            <option value="braids">Braids</option>
+            <option value="bride">Bride</option>
+            <option value="buzzcut">Buzzcut</option>
+            <option value="cornrows">Cornrows</option>
+            <option value="curly_2">Curly 2</option>
+            <option value="dreadlocks">Dreadlocks</option>
+            <option value="einstein_hair">Einstein Hair</option>
+            <option value="elvis">Elvis</option>
+            <option value="evil_spike">Evil Spike</option>
+            <option value="half_shaved">Half Shaved</option>
+            <option value="hat">Hat</option>
+            <option value="long_hair_curly">Long Hair Curly</option>
+            <option value="loose_hair">Loose Hair</option>
+            <option value="mohawk">Mohawk</option>
+            <option value="mowgli">Mowgli</option>
+            <option value="pixie">Pixie</option>
+            <option value="pompadour">Pompadour</option>
+            <option value="quiff">Quiff</option>
+            <option value="twist_long_hair">Twist Long Hair</option>
+            <option value="twist_long_hair_2">Twist Long Hair 2</option>
+            <option value="wick">Wick</option>
+            <option value="wild">Wild</option>
+        </select>
+        <br>
+        Eyebrow Type:
+        <select name="eyebrow_type">
+            <option value="default">Default</option>
+            <option value="">None</option>
+            <option value="angry_natural">Angry Natural</option>
+            <option value="angry">Angry</option>
+            <option value="default_natural">Default Natural</option>
+            <option value="flat_natural">Flat Natural</option>
+            <option value="frown_natural">Frown Natural</option>
+            <option value="raised_excited_natural">Raised Excited Natural</option>
+            <option value="raised_excited">Raised Excited</option>
+            <option value="sad_concerned_natural">Sad Concerned Natural</option>
+            <option value="sad_concerned">Sad Concerned</option>
+            <option value="unibrow_natural">Unibrow Natural</option>
+            <option value="up_down_natural">Up Down Natural</option>
+            <option value="up_down">Up Down</option>
+        </select>
+        <br>
+        Eye Type:
+        <select name="eye_type">
+            <option value="default">Default</option>
+            <option value="closed">Closed</option>
+            <option value="cry">Cry</option>
+            <option value="eye_roll">Eye Roll</option>
+            <option value="happy">Happy</option>
+            <option value="heart">Heart</option>
+            <option value="side">Side</option>
+            <option value="squint">Squint</option>
+            <option value="surprised">Surprised</option>
+            <option value="wink_wacky">Wink Wacky</option>
+            <option value="wink">Wink</option>
+            <option value="x_dizzy">X Dizzy</option>
+        </select>
+        
+        <br>
+        Nose Type:
+        <select name="nose_type">
+            <option value="default">Default</option>
+            <option value="small">Small</option>
+            <option value="wide">Wide</option>
+        </select>
+        <br>
+        Mouth Type:
+        <select name="mouth_type">
+            <option value="default">Default</option>
+            <option value="concerned">Concerned</option>
+            <option value="disbelief">Disbelief</option>
+            <option value="eating">Eating</option>
+            <option value="grimace">Grimace</option>
+            <option value="sad">Sad</option>
+            <option value="scream_open">Scream Open</option>
+            <option value="serious">Serious</option>
+            <option value="smile">Smile</option>
+            <option value="tongue">Tongue</option>
+            <option value="twinkle">Twinkle</option>
+            <option value="vomit">Vomit</option>
+            <option value="big_smile">Big Smile</option>
+        </select>
+        
+        <br>
+        Facial Hair Type:
+        <select name="facial_hair_type">
+            <option value="">None</option>
+            <option value="beard_light">Beard Light</option>
+            <option value="beard_magestic">Beard Magestic</option>
+            <option value="beard_medium">Beard Medium</option>
+            <option value="moustache_fancy">Moustache Fancy</option>
+            <option value="moustache_magnum">Moustache Magnum</option>
+            <option value="einstein_mustache">Einstein Moustache</option>
+            <option value="wick_beard">Wick Beard</option>
+        </select>        
+        <br>
+        Skin Color:
+        <select name="skin_color">
+            <option value="#FD9841" style="background-color: #FD9841; color: white;">Tanned</option>
+            <option value="#F8D25C" style="background-color: #F8D25C; color: black;">Yellow</option>
+            <option value="#FFDBB4" style="background-color: #FFDBB4; color: black;">Pale</option>
+            <option value="#EDB98A" style="background-color: #EDB98A; color: black;">Light</option>
+            <option value="#D08B5B" style="background-color: #D08B5B; color: white;">Brown</option>
+            <option value="#AE5D29" style="background-color: #AE5D29; color: white;">Dark Brown</option>
+            <option value="#614335" style="background-color: #614335; color: white;">Black</option>
+        </select>
+        
+        <br>
+        Clothing Type:
+        <select name="clothing_type">
+            <option value="hoodie">Hoodie</option>
+            <option value="">None</option>
+            <option value="blazer_shirt">Blazer Shirt</option>
+            <option value="blazer_sweater">Blazer Sweater</option>
+            <option value="collar_sweater">Collar Sweater</option>
+            <option value="graphic_shirt">Graphic Shirt</option>
+            <option value="overall">Overall</option>
+            <option value="shirt_crew_neck">Shirt Crew Neck</option>
+            <option value="shirt_scoop_neck">Shirt Scoop Neck</option>
+            <option value="shirt_v_neck">Shirt V Neck</option>
+            <option value="astronaut_suit">Astronaut Suit</option>
+            <option value="bond_suit">Bond Suit</option>
+            <option value="chef">Chef</option>
+            <option value="gladiator">Gladiator</option>
+            <option value="jedi_robe">Jedi Robe</option>
+            <option value="shirt_wick">Shirt Wick</option>
+        </select>
+        
+        <br>
+        Clothing Color:
+        <select name="clothing_color">
+            <option value="#262E33" style="background-color: #262E33; color: white;">Black</option>
+            <option value="#65C9FF" style="background-color: #65C9FF; color: black;">Blue 01</option>
+            <option value="#5199E4" style="background-color: #5199E4; color: black;">Blue 02</option>
+            <option value="#25557C" style="background-color: #25557C; color: white;">Blue 03</option>
+            <option value="#E6E6E6" style="background-color: #E6E6E6; color: black;">Gray 01</option>
+            <option value="#929598" style="background-color: #929598; color: white;">Gray 02</option>
+            <option value="#3C4F5C" style="background-color: #3C4F5C; color: white;">Heather</option>
+            <option value="#B1E2FF" style="background-color: #B1E2FF; color: black;">Pastel Blue</option>
+            <option value="#A7FFC4" style="background-color: #A7FFC4; color: black;">Pastel Green</option>
+            <option value="#FFDEB5" style="background-color: #FFDEB5; color: black;">Pastel Orange</option>
+            <option value="#FFFFB1" style="background-color: #FFFFB1; color: black;">Pastel Yellow</option>
+            <option value="#FF488E" style="background-color: #FF488E; color: white;">Pink</option>
+            <option value="#FF5C5C" style="background-color: #FF5C5C; color: white;">Red</option>
+            <option value="#FFFFFF" style="background-color: #FFFFFF; color: black;">White</option>
+        </select>
+        
+        <br>
+
+       
+
+    
+        <button id="save-btn">Save Image</button>
+        <button id="close-btn">Close</button>
+        <!-- Display the generated avatar here -->
+        <div id="avatar-container"></div>
+    </form>
+
+ 
+
+    <script>
+        $(document).ready(function() {
+            // Function to save the generated avatar image
+            function saveAvatar() {
+                // Get the SVG content of the avatar
+                var svgContent = $('#avatar-container').html();
+                
+                // Create a new canvas element
+                var canvas = document.createElement('canvas');
+                canvas.width = 500; // Set canvas width (adjust as needed)
+                canvas.height = 500; // Set canvas height (adjust as needed)
+                
+                // Get the context of the canvas
+                var ctx = canvas.getContext('2d');
+                
+                // Create a new Image element
+                var img = new Image();
+                
+                // When the image loads, draw it on the canvas
+                img.onload = function() {
+                    ctx.drawImage(img, 0, 0);
+                    
+                    // Convert the canvas content to a data URL
+                    var dataURL = canvas.toDataURL('image/png');
+                    
+                    // Create a temporary link element
+                    var link = document.createElement('a');
+                    link.href = dataURL;
+                    link.download = 'avatar.png'; // Set the download attribute
+                    link.click(); // Programmatically trigger the click event to download
+                };
+                
+                // Set the source of the image to the SVG content
+                img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgContent)));
+            }
+            
+            // Call saveAvatar function when Save Image button is clicked
+            $('#save-btn').click(function(event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+                saveAvatar();
+            });
+    
+            // Function to update avatar image based on selected options
+            function updateAvatar() {
+                // Serialize form data
+                var formData = $('#avatar-form').serialize();
+        
+                // Send form data asynchronously to the server for avatar generation
+                $.ajax({
+                    type: 'POST',
+                    url: '/generate',
+                    data: formData,
+                    success: function(response) {
+                        // Display the generated avatar SVG in the container
+                        $('#avatar-container').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        console.error(error);
+                    }
+                });
+            }
+        
+            // Call updateAvatar function when form options change
+            $('#avatar-form select').change(function() {
+                updateAvatar();
+            });
+        
+            // Initialize avatar on page load
+            updateAvatar();
+
+            
+            // Close button click event handler
+            $('#close-btn').click(function() {
+                window.location.href = 'Profile.html'; // Redirect to Profile.html
+            });
+
+        });
+    </script>
+    
+    
+
+    
+    
+        
+</body>
+</html>
