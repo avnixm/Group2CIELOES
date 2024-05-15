@@ -33,21 +33,15 @@ and engaging content.</h3>
 
 <h2>Sign Up</h2>
 
-![image](https://github.com/avnixm/CIELOES/assets/111229786/a6e6fe7d-a32e-42c8-94d6-ee3dc58ec26e)
+![image](https://github.com/avnixm/CIELOES/assets/111229786/860b95ad-4218-4e28-8244-2858b3ce214e)
 
 <h2>Sign Up OTP Verification</h2>
 
-![image](https://github.com/avnixm/Cieloes-html-css-skeleton/assets/111229786/8e48449a-bda2-45d4-b633-495b355ecada)
-
+![image](https://github.com/avnixm/CIELOES/assets/111229786/502b0611-0d2a-495a-bada-2d178d717ae5)
 
 <h2>Login Page</h2>
 
-![image](https://github.com/avnixm/CIELOES/assets/111229786/855416d3-696e-42f7-819b-31843fd37333)
-
-<h2>Login OTP Verification</h2>
-
-![image](https://github.com/avnixm/Cieloes-html-css-skeleton/assets/111229786/7fa22e1a-eb53-4195-b90a-e95664a89590)
-
+![image](https://github.com/avnixm/CIELOES/assets/111229786/ac26982a-b149-452f-8096-346990db71cf)
 
 <h1>Main Page</h1>
 <h2>Learn Page</h2>
@@ -55,6 +49,7 @@ and engaging content.</h3>
 ![image](https://github.com/avnixm/CIELOES/assets/111229786/fdc04878-5582-4a1c-b757-d387b5ef9daa)
 
 <h2>Practice Page</h2>
+
 
 
 <h2>Leaderboards Page</h2>
@@ -82,9 +77,9 @@ and engaging content.</h3>
     <li><strong>[done]</strong> Word of the day</li>
   </ul>
   <li>Practice Page</li>
-  <li>Leaderboards Page</li>
-  <li>Shop Page</li>
-  <li>Profile Page</li>
+  <li><strong>[done]</strong>Leaderboards Page</li>
+  <li><strong>[done]</strong>Shop Page</li>
+  <li><strong>[done]</strong>Profile Page</li>
 </ul>
 
 <h2>Planned but not started</h2>
