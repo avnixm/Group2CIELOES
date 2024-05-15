@@ -1,0 +1,140 @@
+﻿.content {
+    width: 80%; 
+    height: 80vh;
+    padding: 30px 25px 30px 25px;
+    background-color: #f2f2f2; 
+    border-radius: 1rem; 
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.2); 
+    margin-left: 48px; 
+    margin-top: 120px; 
+    overflow: auto;
+}
+
+
+.content h2{
+    background-color: hsl(98, 51%, 54%);
+    color: #fff;
+    padding: 20px 20px 20px 30px;
+    border-radius:1rem;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1rem; 
+}
+
+.gem {
+    width: 16px; 
+}
+
+.gems-container {
+    right: 152px; 
+}
+
+.gems-text {
+    font-size: 16px;
+}
+
+.hart {
+    width: 20px; 
+}
+
+.hart-container {
+    right: 88px; 
+}
+
+.hart-text {
+    font-size: 16px; 
+}
+
+.heart {
+    width: 80px; 
+}
+
+.heart-container h4 {
+    margin-top: -56px;
+    margin-left: 96px; 
+}
+
+.heart-container p {
+    margin-top: 8px; 
+    margin-left: 96px;
+}
+
+.custom-button {
+    font-size: 12.8px; 
+    margin-left: 640px; 
+    margin-top: -2px; 
+    top: -40px; 
+    background-color: transparent;
+    border-color: lightgray;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: flex-end;
+    margin-left: 800px; 
+    margin-top: -70px; 
+    position: relative; 
+    top: -10px;
+}
+
+.custom-button1 {
+    font-size: 12.8px; 
+    margin-top: -2px; 
+    background-color: transparent;
+    border-color: lightgray;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: flex-end;
+    margin-left: 835px;
+    margin-top: -70px; 
+    position: relative; 
+    top: -40px; 
+}
+
+.custom-button2 {
+    background-color: transparent;
+    border-color: lightgray;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: flex-end;
+    margin-left: 800px; 
+    margin-top: -70px; 
+    position: relative; 
+    top: -10px; 
+}
+
+.custom-button3 {
+    font-size: 12.8px; 
+    margin-left: 640px;
+
+    background-color: transparent;
+    border-color: lightgray;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: flex-end;
+    margin-left: 800px;
+    margin-top: -80px; 
+    position: relative; 
+    top: -10px;
+}

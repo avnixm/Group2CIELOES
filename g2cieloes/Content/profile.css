@@ -1,0 +1,439 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+::-webkit-scrollbar{
+    display:none;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+
+:root{
+    --text: #060705;
+    --background: #f5f8f4;
+    --primary: #79b751;
+    --secondary: #aade89;
+    --accent: #89e251;
+    --big-font: 3.5rem;
+    --h2-font: 2.5rem;
+    --p-font:1.5rem;
+}
+
+*::selection{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+body{
+    color:var(--text);
+    background: var(--background);
+}
+
+button:hover {
+    color: var(--primary);
+    background-color: #ddf4ff;
+    border-color: #248627bd;
+}
+  
+button:active {
+    border-bottom: 2px solid var(--accent);
+}
+
+
+/********************* main profile dv *******************/
+
+.profilemain {
+    position: absolute;
+    background: var(--background);
+    width: 70%;
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 120px;
+    border-bottom: 3px solid grey;
+    
+    
+}
+
+    .avatardv{
+
+    position: relative;
+    background-color: rgb(175, 175, 175);
+    height: 200px;
+    width: 430px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    /*  border: 2px solid grey; */
+    
+}
+
+.selected-avatar{
+    
+    width: 300px;
+    height: 200px;
+    margin-left: 65px;
+    margin-top: 17px;
+    
+}
+
+.editbtn{
+    
+    font-weight: 500;
+    font-family:'Nunito', Helvetica, sans-serif;
+    font-size: medium;
+    position: absolute;
+    color: #fff;
+    background-color: var(--primary);
+    width: 50px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    border-bottom: 4px solid #248627bd;
+    margin: 10px;
+    transition: all 0.1s;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+        margin-left: 370px;
+        margin-top: 13px;  
+}
+
+.editbtn:hover {
+    color: var(--text);
+    background-color: var(--secondary);
+    border-color: #4c8128;
+}
+
+.editbtn:active {
+    border-bottom: 2px solid #4c8128;
+}
+
+
+/* #edit{
+    position: absolute;
+    color: rgb(0, 0, 0);;
+    width: 30px;
+    border-radius: 16px;
+    transition: all 0.1s;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    
+    border: 2px solid black;
+        
+    }*/
+
+
+.profilemain #name
+    {
+    
+        margin-top: 20px;
+}
+
+.profilemain #username{
+    
+    margin-top: 10px;
+    font:1.5rem;
+}
+
+.profilemain #datejoin {
+
+    position: relative;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+
+    
+/********************* statistics div***********************/ 
+#statistics{
+    position: absolute;
+    font-weight: 900;
+    font-size: 1.3rem;
+    top: 1%;
+    left: 50%
+}
+
+.daystreak {
+    position: absolute;
+    background-color: #f5f8f4;
+    height: 100px;
+    width: 410px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    top: 1%;
+    left: 50%; 
+}
+
+/************* streak dv****************/
+
+.streak-sts {
+    background-image: url(/images/icons/firestreaksml.jpg);
+    background-repeat: no-repeat;
+    
+    height: 35px;
+    width: 25px;
+    
+    margin: 9px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#tsp {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 40px;
+}
+
+#tspdb{
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+/****************** ranks / leaderboards ***************/
+.rank {
+    position: absolute;
+    background-color: #f5f8f4;
+    height: 100px;
+    width: 410px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    left: 50%;
+    top: 45%;
+}
+
+.rkdv{
+    
+    background-image: url(/images/icons/leaderboardcolor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 35px;
+    width: 35px;
+    
+    margin: 9px;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+#ctr {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 40px;
+}
+
+/*********************** Account Div ***********************/
+.account {
+    background-color:#f5f8f4;
+    height: 400px;
+    width: 890px;
+    position: absolute;
+    right: 10px;
+    top: 110%;
+}
+
+#acct{
+    font-weight: 900;
+}
+
+
+
+#p-username{
+background-color: var(--background);
+border: none;
+width: 50%;
+border-radius: 1rem;
+padding: 10px;
+border: 1px solid grey;
+margin-bottom: 20px;
+margin-top: 30px;
+margin-left: 260px;
+font-size: 20px;
+
+}
+
+#p-name{
+    background-color: var(--background);
+    border: none;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    margin-left: 260px;
+    font-size: 20px;
+}
+
+#p-email{
+    background-color: var(--background);
+    border: none;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    margin-left: 260px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.lbusername{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 45px;
+}
+
+.lbname{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 110px;
+}
+
+.lbemail{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 180px;
+}
+
+#namelb{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#savebtn{
+    position: absolute;
+    color: #fff;
+    background-color: var(--primary);
+    width: 100px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    border-bottom: 4px solid #248627bd;
+    margin: 10px;
+    transition: all 0.1s;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: -190px;
+}
+
+#savebtn:hover {
+    color: var(--text);
+    background-color: var(--secondary);
+    border-color: #4c8128;
+}
+
+#savebtn:active {
+    border-bottom: 2px solid #4c8128;
+}
+
+#logoutbtn{
+    color: #fff;
+    background-color: var(--primary);
+    position: absolute;
+    width: 100px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    border-bottom: 4px solid #248627bd;
+    transition: all 0.1s;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 430px;
+    margin-top:20px;
+    position: absolute; 
+}
+
+#logoutbtn:hover {
+    color: var(--text);
+    background-color: var(--secondary);
+    border-color: #4c8128;
+}
+
+#logoutbtn:active {
+    border-bottom: 2px solid #4c8128;
+}
+
+/************ avatar ***************/
+
+/* CSS for avatar selection */
+.avatar-option {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin: 10px;
+}
+.avatar-option.selected {
+    border-color: blue;
+}
+.selected-avatar img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* CSS for modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#closebtn{
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #fff;
+    background-color: var(--primary);
+    width: 50px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    border-bottom: 4px solid #248627bd;
+    margin: 10px;
+    transition: all 0.1s;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#closebtn:hover {
+    color: var(--text);
+    background-color: var(--secondary);
+    border-color: #4c8128;
+}
+
+#closebtn:active {
+    border-bottom: 2px solid #4c8128;
+}

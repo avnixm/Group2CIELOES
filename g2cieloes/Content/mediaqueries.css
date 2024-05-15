@@ -1,0 +1,295 @@
+﻿/*media queries*/
+
+@media(max-width:1560px){
+    header{
+        padding: 15px 40px;
+    }
+    :root{
+        --big-font: 3rem;
+        --h2-font: 2rem;
+    }
+    
+}
+
+@media(max-width: 1140px){
+    section{
+        padding: 50px 8%;
+    }
+    .menu-icon{
+        display: initial;
+        color: var(--primary);
+        cursor: pointer;
+    }
+    header .navbar{
+        position: absolute;
+        top: -200px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: var(--primary);
+        transition: top .3s;
+        z-index: 1001;
+    }
+
+    header .navbar .active{
+        top: 70px;
+    }
+
+    .navbar a{
+        padding:1.5rem;
+        display: block;
+    }
+
+
+    .login-container .username{
+        width: 100%;
+    }
+
+    .login-modal .password{
+        width: 100%;
+    }
+
+    .login-btn{
+        width: 100%;
+    }
+
+    .signup-modal .user_fname {
+        width: 100%;
+    }
+
+    .signup-modal .user_lname {
+        width: 100%;
+    }
+
+    .signup-modal .user_name {
+        width: 100%;
+    }
+
+    .signup-modal .user_email {
+        width: 100%;
+    }
+
+    .signup-modal .user_password {
+        width: 100%;
+    }
+
+    .signup-modal .user_cpassword {
+        width: 100%;
+    }
+
+    .signup-modal .Gradelevel {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 720px){
+    header{
+        padding: 10px 16px;
+    }
+    .home{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    section{
+        padding: 100px 7%;
+    }
+    .login-modal .username{
+        width: 120%;
+    }
+
+    .login-modal .password{
+        width: 120%;
+    }
+
+    .login-btn{
+        width: 120%;
+    }
+
+    .signup-modal .user_fname {
+        width: ;
+    }
+
+    .signup-modal .user_lname {
+        width: 120%;
+    }
+
+    .signup-modal .user_name {
+        width: 120%;
+    }
+
+    .signup-modal .user_email {
+        width: 120%;
+    }
+
+    .signup-modal .user_password {
+        width: 120%;
+    }
+
+    .signup-modal .user_cpassword {
+        width: 120%;
+    }
+
+    .signup-modal .Gradelevel {
+        width: 120%;
+    }
+}
+
+@media(max-width: 575px){
+    .login-container{
+        width: 80%;
+    }
+    .login-modal .username{
+        width: 130%;
+    }
+
+    .login-modal .password{
+        width: 130%;
+    }
+
+    .login-btn{
+        width: 130%;
+    }
+
+    .signup-container{
+        width: 90%;
+    }
+
+    .signup-modal{
+        width:100%;
+    }
+
+    .signup-modal .user_fname{
+        width: 130%;
+    }
+
+    .signup-modal .user_lname{
+        width: 130%;
+    }
+
+    .signup-modal .user_name{
+        width: 130%;
+    }
+
+    .signup-modal .user_email{
+        width: 130%;
+    }
+    .signup-modal .user_password{
+        width: 130%;
+    }
+
+    .signup-modal .user_cpassword{
+        width: 130%;
+    }
+
+    .signup-modal .Gradelevel{
+        width: 130%;
+    }
+}
+
+@media(max-width: 412px){
+    .login-container{
+        width: 90%;
+    }
+    .contact-container{
+        width: 90%;
+    }
+
+    .login-modal{
+        width:100%;
+    }
+
+    .login-modal .username{
+        width: 140%;
+    }
+
+    .login-modal .password{
+        width: 140%;
+    }
+
+    .login-btn{
+        width: 140%;
+    }
+
+    .signup-container{
+        width: 90%;
+    }
+
+    .signup-modal{
+        width:100%;
+    }
+
+    .signup-modal .user_fname{
+        width: 140%;
+    }
+
+    .signup-modal .user_lname{
+        width: 140%;
+    }
+
+    .signup-modal .user_name{
+        width: 140%;
+    }
+
+    .signup-modal .user_email{
+        width: 140%;
+    }
+    .signup-modal .user_password{
+        width: 140%;
+    }
+
+    .signup-modal .user_cpassword{
+        width: 140%;
+    }
+
+    .signup-modal .Gradelevel{
+        width: 140%;
+    }
+
+    .signup-btn{
+        width: 140%;
+    }
+}
+
+@media(max-width: 575px){
+    .contact-container{
+        width: 90%;
+    }
+    .contact-input{
+        width: 140%;
+    } 
+    .submit-btn{
+        width: 140%;
+    }
+}
+
+@media(max-width: 720px){
+    .contact-container{
+        width: 90%;
+    }
+    .contact-input{
+        width: 120%;
+    } 
+
+    .submit-btn{
+        width: 120%;
+    }
+}
+
+@media(max-width: 412px){
+    .contact-container{
+        width: 90%;
+    }
+    .contact-input{
+        width: 140%;
+    } 
+    .submit-btn{
+        width: 140%;
+    }
+}
