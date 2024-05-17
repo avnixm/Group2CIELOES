@@ -125,7 +125,7 @@ namespace g2cieloes
         private string GetGoogleAuthorization()
         {
             string clientId = "160524548544-g5m3905r30lalf7usvnh822kpl0skq2r.apps.googleusercontent.com";
-            string redirectUri = "https://cieloes.azurewebsites.net/Learn";
+            string redirectUri = "https://localhost:44331/Learn";
             string scope = "email profile openid";
 
             string url = $"https://accounts.google.com/o/oauth2/auth?" + $"client_id={clientId}&" + $"redirect_uri={redirectUri}&" + $"scope={scope}&" + $"response_type=code";
