@@ -42,7 +42,7 @@ namespace g2cieloes
 
                 if (!CheckIfEmailExists(useremail))
                 {
-                    string connectionString = "Server=localhost;Database=g2cieloes;Uid=marin;Pwd=marino";
+                    string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
                     string query = "INSERT INTO userinfo (user_fname, user_lname, user_email, user_password, user_xp, user_hearts, IsActivated) VALUES (@FName, @LName, @Email, @Password, @UserXP, @UserHearts, @IsActivated)";
 
                     using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -82,7 +82,7 @@ namespace g2cieloes
 
         private bool CheckIfEmailExists(string email)
         {
-            string connectionString = "Server=localhost;Database=g2cieloes;Uid=marin;Pwd=marino";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -184,6 +184,7 @@ namespace g2cieloes
                     OTPbtn.Visible = true;
 
                     labelforotpverification.Text = "OTP Sent!";
+                    labelforotpverification.ForeColor = System.Drawing.Color.Green;
                 }
                 catch (Exception ex)
                 {

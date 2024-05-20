@@ -13,7 +13,7 @@
                 }
             </script>
                 <div class="signup-details">
-                    <asp:Label ID="OTPlabel" runat="server" Text="OTP SENT!" style="display: none; color: #79b751;"></asp:Label>
+                    <asp:Label ID="labelforotpverification" runat="server" Text=""></asp:Label>
                     <h2>Sign Up</h2>
                     <asp:TextBox ID="firstname" class="firstname" runat="server" placeholder="First Name" required></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Special characters not allowed!" ControlToValidate="firstname" Display="Dynamic" ForeColor="Red" ValidationExpression="^[a-zA-Z ]+$" ValidationGroup="Svalidator"></asp:RegularExpressionValidator>
@@ -25,7 +25,6 @@
                     <asp:Button ID="SendOTP" class="sendOTP" runat="server" Text="Send OTP" OnClick="SendOTP_Click" />
                     </div>
                     <div class="otpverify">
-                        <asp:Label ID="labelforotpverification" runat="server" Text=""></asp:Label>
                         <asp:TextBox ID="otptext" class="email" runat="server" Visible="False"></asp:TextBox>
                         <asp:Button ID="OTPbtn" class="sendOTP" style="background-color:#79b751;" runat="server" Text="Verify OTP" OnClick="OTPbtn_Click1" Visible="False" />
                     </div>

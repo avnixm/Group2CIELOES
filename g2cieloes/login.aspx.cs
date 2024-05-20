@@ -21,7 +21,7 @@ namespace g2cieloes
             {
                 Response.Write("Captcha Valid!");
 
-                string connectionString = "Server=localhost;Database=g2cieloes;Uid=marin;Pwd=marino";
+                string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
                 string userEmail = user_email.Text;
                 string password = user_password.Text;
 

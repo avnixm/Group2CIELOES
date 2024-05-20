@@ -15,7 +15,7 @@
 
                 <div class="reset-details">
                     <h2>Reset Password</h2>
-                    <asp:Label ID="labelforotpverification" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="labelforotpverification" style="margin-bottom:1%;" runat="server" Text=""></asp:Label>
                     <div class="sendotpclass">
                     <asp:TextBox ID="email" ClientIDMode="Static" class="email" runat="server" placeholder="Email" required></asp:TextBox>
                     <asp:Button ID="SendOTP" class="sendOTP" runat="server" Text="Send OTP" OnClick="SendOTP_Click" />

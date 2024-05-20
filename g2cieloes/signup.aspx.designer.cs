@@ -15,13 +15,13 @@ namespace g2cieloes
     {
 
         /// <summary>
-        /// OTPlabel control.
+        /// labelforotpverification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label OTPlabel;
+        protected global::System.Web.UI.WebControls.Label labelforotpverification;
 
         /// <summary>
         /// firstname control.
@@ -85,15 +85,6 @@ namespace g2cieloes
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SendOTP;
-
-        /// <summary>
-        /// labelforotpverification control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelforotpverification;
 
         /// <summary>
         /// otptext control.

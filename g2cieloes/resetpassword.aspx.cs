@@ -85,7 +85,7 @@ namespace g2cieloes
                 }
                 catch (Exception ex)
                 {
-                    // Handle exception (optional)
+                   
                 }
             }
             else
@@ -118,8 +118,8 @@ namespace g2cieloes
             {
                 labelforotpverification.Text = "OTP verified!";
                 labelforotpverification.ForeColor = System.Drawing.Color.Green;
-                newpass.Visible = true; // Show the new password text box if OTP is verified
-                changepassbtn.Visible = true; // Show the change password button if OTP is verified
+                newpass.Visible = true;
+                changepassbtn.Visible = true;
             }
             else
             {
@@ -158,7 +158,8 @@ namespace g2cieloes
 
         private bool CheckIfEmailExists(string email)
         {
-            string connectionString = "Server=localhost;Database=g2cieloes;Uid=marin;Pwd=marino";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
+            ;
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT COUNT(*) FROM userinfo WHERE user_email = @Email";
@@ -174,7 +175,7 @@ namespace g2cieloes
 
         private void UpdatePassword(string email, string hashedPassword)
         {
-            string connectionString = "Server=localhost;Database=g2cieloes;Uid=marin;Pwd=marino";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "UPDATE userinfo SET user_password = @Password WHERE user_email = @Email";
