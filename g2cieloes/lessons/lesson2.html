@@ -75,7 +75,9 @@
         }
 
         .button {
-            display: inline-block;
+            display: inline-flex; 
+            justify-content: center; 
+            align-items: center;
             padding: 10px;
             margin: 30px;
             margin-top: 10px;
@@ -85,8 +87,10 @@
             text-align: center;
             border-radius: 16px;
             border: 1px solid var(--secondary);
-            border-bottom: 5px solid var(--secondary);
+            border-bottom: 5px solid var( --primary);
             transition: all 0.1s;
+            font-weight: bold;
+            
         }
 
         .button:hover {
@@ -172,100 +176,100 @@
         <h1>What color is a banana?</h1>
         <img src="/lessons/lesson images/Banana.jpg" alt="Banana" class="fruit-image">
         <div class="button-container">
-            <div class="button red" onclick="showNextQuestion(0, 'red')"></div>
-            <div class="button green" onclick="showNextQuestion(0, 'green')"></div>
-            <div class="button yellow" onclick="showNextQuestion(0, 'yellow')"></div>
-            <div class="button purple" onclick="showNextQuestion(0, 'purple')"></div>
+            <div class="button red" onclick="showNextQuestion(0, 'red')">RED</div>
+            <div class="button green" onclick="showNextQuestion(0, 'green')">GREEN</div>
+            <div class="button yellow" onclick="showNextQuestion(0, 'yellow')">YELLOW</div>
+            <div class="button purple" onclick="showNextQuestion(0, 'purple')">PURPLE</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is an apple?</h1>
         <img src="lesson images/apple.jpg" alt="Apple" class="fruit-image">
         <div class="button-container">
-            <div class="button black" onclick="showNextQuestion(1, 'black')"></div>
-            <div class="button blue" onclick="showNextQuestion(1, 'blue')"></div>
-            <div class="button yellow" onclick="showNextQuestion(1, 'yellow')"></div>
-            <div class="button red" onclick="showNextQuestion(1, 'red')"></div>
+            <div class="button black" onclick="showNextQuestion(1, 'black')">BLACK</div>
+            <div class="button blue" onclick="showNextQuestion(1, 'blue')">BLUE</div>
+            <div class="button yellow" onclick="showNextQuestion(1, 'yellow')">YELLOW</div>
+            <div class="button red" onclick="showNextQuestion(1, 'red')">RED</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a blueberry?</h1>
         <img src="/lessons/lesson images/blueberry.jpg" alt="Blueberry" class="fruit-image">
         <div class="button-container">
-            <div class="button green" onclick="showNextQuestion(2, 'green')"></div>
-            <div class="button blue" onclick="showNextQuestion(2, 'blue')"></div>
-            <div class="button orange" onclick="showNextQuestion(2, 'orange')"></div>
-            <div class="button black" onclick="showNextQuestion(2, 'black')"></div>
+            <div class="button green" onclick="showNextQuestion(2, 'green')">GREEN</div>
+            <div class="button blue" onclick="showNextQuestion(2, 'blue')">BLUE</div>
+            <div class="button orange" onclick="showNextQuestion(2, 'orange')">ORANGE</div>
+            <div class="button black" onclick="showNextQuestion(2, 'black')">BLACK</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is an orange?</h1>
         <img src="lesson images/Orange.jpg" alt="Orange" class="fruit-image">
         <div class="button-container">
-            <div class="button yellow" onclick="showNextQuestion(3, 'yellow')"></div>
-            <div class="button red" onclick="showNextQuestion(3, 'red')"></div>
-            <div class="button orange" onclick="showNextQuestion(3, 'orange')"></div>
-            <div class="button purple" onclick="showNextQuestion(3, 'purple')"></div>
+            <div class="button yellow" onclick="showNextQuestion(3, 'yellow')">YELLOW</div>
+            <div class="button red" onclick="showNextQuestion(3, 'red')">RED</div>
+            <div class="button orange" onclick="showNextQuestion(3, 'orange')">ORANGE</div>
+            <div class="button purple" onclick="showNextQuestion(3, 'purple')">PURPLE</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a grape?</h1>
         <img src="/lessons/lesson images/Grapes.jpg" alt="Grape" class="fruit-image">
         <div class="button-container">
-            <div class="button purple" onclick="showNextQuestion(4, 'purple')"></div>
-            <div class="button red" onclick="showNextQuestion(4, 'red')"></div>
-            <div class="button brown" onclick="showNextQuestion(4, 'brown')"></div>
-            <div class="button yellow" onclick="showNextQuestion(4, 'yellow')"></div>
+            <div class="button purple" onclick="showNextQuestion(4, 'purple')">PURPLE</div>
+            <div class="button red" onclick="showNextQuestion(4, 'red')">RED</div>
+            <div class="button brown" onclick="showNextQuestion(4, 'brown')">BROWN</div>
+            <div class="button yellow" onclick="showNextQuestion(4, 'yellow')">YELLOW</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a lemon?</h1>
         <img src="lesson images/Lemon.jpg" alt="Lemon" class="fruit-image">
         <div class="button-container">
-            <div class="button green" onclick="showNextQuestion(5, 'green')"></div>
-            <div class="button yellow" onclick="showNextQuestion(5, 'yellow')"></div>
-            <div class="button blue" onclick="showNextQuestion(5, 'blue')"></div>
-            <div class="button pink" onclick="showNextQuestion(5, 'pink')"></div>
+            <div class="button green" onclick="showNextQuestion(5, 'green')">GREEN</div>
+            <div class="button yellow" onclick="showNextQuestion(5, 'yellow')">YELLOW</div>
+            <div class="button blue" onclick="showNextQuestion(5, 'blue')">BLUE</div>
+            <div class="button black" onclick="showNextQuestion(5, 'black')">BLACK</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a strawberry?</h1>
         <img src="lesson images/stawberry.jpg" alt="Strawberry" class="fruit-image">
         <div class="button-container">
-            <div class="button red" onclick="showNextQuestion(6, 'red')"></div>
-            <div class="button blue" onclick="showNextQuestion(6, 'blue')"></div>
-            <div class="button yellow" onclick="showNextQuestion(6, 'yellow')"></div>
-            <div class="button green" onclick="showNextQuestion(6, 'green')"></div>
+            <div class="button red" onclick="showNextQuestion(6, 'red')">RED</div>
+            <div class="button blue" onclick="showNextQuestion(6, 'blue')">BLUE</div>
+            <div class="button yellow" onclick="showNextQuestion(6, 'yellow')">YELLOW</div>
+            <div class="button green" onclick="showNextQuestion(6, 'green')">GREEN</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a Mango?</h1>
         <img src="lesson images/Mango.jpg" alt="Mango" class="fruit-image">
         <div class="button-container">
-            <div class="button orange" onclick="showNextQuestion(7, 'orange')"></div>
-            <div class="button blue" onclick="showNextQuestion(7, 'blue')"></div>
-            <div class="button green" onclick="showNextQuestion(7, 'green')"></div>
-            <div class="button black" onclick="showNextQuestion(7, 'black')"></div>
+            <div class="button orange" onclick="showNextQuestion(7, 'orange')">ORANGE</div>
+            <div class="button blue" onclick="showNextQuestion(7, 'blue')">BLUE</div>
+            <div class="button green" onclick="showNextQuestion(7, 'green')">GREEN</div>
+            <div class="button black" onclick="showNextQuestion(7, 'black')">BLACK</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a watermelon on the outside?</h1>
         <img src="lesson images/watermelonn.jpg" alt="Watermelon" class="fruit-image">
         <div class="button-container">
-            <div class="button red" onclick="showNextQuestion(8, 'red')"></div>
-            <div class="button green" onclick="showNextQuestion(8, 'green')"></div>
-            <div class="button yellow" onclick="showNextQuestion(8, 'yellow')"></div>
-            <div class="button purple" onclick="showNextQuestion(8, 'purple')"></div>
+            <div class="button red" onclick="showNextQuestion(8, 'red')">RED</div>
+            <div class="button green" onclick="showNextQuestion(8, 'green')">GREEN</div>
+            <div class="button yellow" onclick="showNextQuestion(8, 'yellow')">YELLOW</div>
+            <div class="button purple" onclick="showNextQuestion(8, 'purple')">PURPLE</div>
         </div>
     </div>
     <div class="question">
         <h1>What color is a cherry?</h1>
         <img src="lesson images/cherry.jpg" alt="Cherry" class="fruit-image">
         <div class="button-container">
-            <div class="button red" onclick="showNextQuestion(9, 'red')"></div>
-            <div class="button green" onclick="showNextQuestion(9, 'green')"></div>
-            <div class="button blue" onclick="showNextQuestion(9, 'blue')"></div>
-            <div class="button brown" onclick="showNextQuestion(9, 'brown')"></div>
+            <div class="button red" onclick="showNextQuestion(9, 'red')">RED</div>
+            <div class="button green" onclick="showNextQuestion(9, 'green')">GREEN</div>
+            <div class="button blue" onclick="showNextQuestion(9, 'blue')">BLUE</div>
+            <div class="button brown" onclick="showNextQuestion(9, 'brown')">BROWN</div>
         </div>
     </div>
     <div class="button-result">
