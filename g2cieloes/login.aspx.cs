@@ -2,7 +2,7 @@
 using System.Web.UI;
 using MySql.Data.MySqlClient;
 using System.Text;
-using System.Security.Cryptography;
+using BCrypt.Net;
 
 namespace g2cieloes
 {
@@ -21,7 +21,7 @@ namespace g2cieloes
             {
                 Response.Write("Captcha Valid!");
 
-                string connectionString = "Server=MYSQL9001.site4now.net;Database=db_aa7b08_cieloes;Uid=aa7b08_cieloes;Pwd=g2cieloes";
+                string connectionString = "Server=localhost;Database=g2cieloes;Uid=marin;Pwd=marino";
                 string userEmail = user_email.Text;
                 string password = user_password.Text;
 
@@ -52,7 +52,7 @@ namespace g2cieloes
             User user = new User();
 
             string query = @"
-                SELECT user_id, user_fname, registration_date
+                SELECT userID, user_fname, RegistrationDate, user_password
                 FROM userinfo
                 WHERE user_email = @UsernameOrEmail";
 
@@ -69,6 +69,7 @@ namespace g2cieloes
                     user.user_id = reader.GetInt32(0);
                     user.user_fname = reader.GetString(1);
                     user.registration_date = reader.GetDateTime(2);
+                    user.Password = reader.GetString(3);
                 }
 
                 reader.Close();
@@ -79,42 +80,13 @@ namespace g2cieloes
 
         private bool IsValidLogin(string connectionString, string email, string password)
         {
-            string query = "SELECT user_password FROM userinfo WHERE user_email = @Email";
+            User user = GetUserDetails(connectionString, email);
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            if (user != null)
             {
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Email", email);
-
-                    connection.Open();
-                    object result = command.ExecuteScalar();
-                    if (result != null)
-                    {
-                        string hashedPasswordFromDB = result.ToString();
-                        string hashedPassword = ComputeMD5Hash(password);
-
-                        return hashedPassword == hashedPasswordFromDB;
-                    }
-                    return false;
-                }
+                return BCrypt.Net.BCrypt.Verify(password, user.Password);
             }
-        }
-
-        private string ComputeMD5Hash(string input)
-        {
-            using (MD5 md5 = MD5.Create())
-            {
-                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
-                byte[] hashBytes = md5.ComputeHash(inputBytes);
-
-                StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < hashBytes.Length; i++)
-                {
-                    sb.Append(hashBytes[i].ToString("x2"));
-                }
-                return sb.ToString();
-            }
+            return false;
         }
 
         protected void googleLogin_Click(object sender, EventArgs e)

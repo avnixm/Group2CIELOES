@@ -22,10 +22,10 @@
                     <asp:TextBox ID="user_password" type="password" class="password" placeholder="Password" runat="server" required ValidationGroup="loginV"></asp:TextBox>
                     <div class="g-recaptcha" data-sitekey="6LdREcIpAAAAAEWe9sTuzO61bqtWBToHCI7Yxoc2"></div>
                     <asp:Button ID="LoginBtn" class="login-btn" runat="server" Text="LOG IN" OnClick="LoginBtn_Click" ValidationGroup="loginV"/>
-                    <p>Don't have an account? <a onclick="redirectToPageSignUp()" id="signup-link" style="color: blue; cursor: pointer;">Sign Up</a></p>
+                    <p>Forgot your Password? <a onclick="redirectToPageSignUp()" id="signup-link" style="color: blue; cursor: pointer;">Reset Password</a></p>
                     <script>
                     function redirectToPageSignUp() {
-                        window.location.href = 'signup.aspx';
+                        window.location.href = 'resetpassword.aspx';
                         }
                     </script>
                 </div>

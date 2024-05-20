@@ -185,6 +185,7 @@
     <Content Include="Content\leaderboards.css" />
     <Content Include="Content\mediaqueries.css" />
     <Content Include="Content\profile.css" />
+    <Content Include="Content\reset.css" />
     <Content Include="Content\shop.css" />
     <Content Include="Content\signup.css" />
     <Content Include="Content\Site.css" />
@@ -197,6 +198,8 @@
     <Content Include="Learn.aspx" />
     <Content Include="login.aspx" />
     <Content Include="profile.aspx" />
+    <Content Include="resetpassword.aspx" />
+    <Content Include="resetsuccess.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -216,6 +219,8 @@
     <None Include="Properties\PublishProfiles\cieloes-001-site1 - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\g2cieloes-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\g2cieloes-001-site1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\g2cieloes20240417180750 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\g2cieloes20240417180750 - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
@@ -224,7 +229,6 @@
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\otp.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -307,6 +311,20 @@
       <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resetpassword.aspx.cs">
+      <DependentUpon>resetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetpassword.aspx.designer.cs">
+      <DependentUpon>resetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resetsuccess.aspx.cs">
+      <DependentUpon>resetsuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetsuccess.aspx.designer.cs">
+      <DependentUpon>resetsuccess.aspx</DependentUpon>
+    </Compile>
     <Compile Include="shop.aspx.cs">
       <DependentUpon>shop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
