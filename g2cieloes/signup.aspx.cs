@@ -31,14 +31,6 @@ namespace g2cieloes
                 string useremail = email.Text;
                 string userpassword = HashPassword(password.Text);
 
-                User user = new User
-                {
-                    FirstName = userfname,
-                    LastName = userlname,
-                    Email = useremail,
-                    Password = userpassword,
-                };
-
 
                 if (!CheckIfEmailExists(useremail))
                 {

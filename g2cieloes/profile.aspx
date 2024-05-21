@@ -16,11 +16,11 @@
         <div class="xp_hearts">
             <div class="xp">
                 <img src="Content/images/icons/exp.svg"/>
-                <h2>1100</h2>
+                <asp:Label ID="userxplabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
             </div>
             <div class="hearts">
                 <img src="Content/images/icons/hearts.svg"/>
-                <h2>3</h2>
+                <asp:Label ID="userheartslabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
             </div>
         </div>
 
@@ -55,9 +55,10 @@
                     <p id="ctr">Current Rank</p>
                 </div>
             </div>
-            <h2 id="name">name</h2>
-            <p id="username">username</p>
-            <p id="datejoin">joined date </p>
+            <br />
+           <asp:Label ID="firstnamelabel" runat="server" Text="Name" Font-Bold="True" style="margin-top: 10%;font-size: 2rem;"></asp:Label>
+            <br />
+            <asp:Label ID="datejoinedlabel" runat="server" Text="Date Joined" style="margin-top:10%;"></asp:Label>
 
 
             <h2 id="statistics"></h2>
@@ -70,9 +71,9 @@
 
             <div class="account">
                 <h2 id="acct">Account</h2>
-                <div class="lbusername"> <label id="usernameLabel">Username</label></div>
+                <div class="lbusername"> <label id="usernameLabel">Email</label></div>
                 <div class="lbname"> <label id="nameLabel">Name</label></div>
-                <div class="lbemail"> <label id="emailLabel">Email</label></div>
+                <div class="lbemail"> <label id="emailLabel">Password</label></div>
                    
                 <input type="text" id="p-username"/>
                 <input type="text" id="p-name"/>
@@ -184,3 +185,4 @@ if (selectedAvatarUrl) {
     </script>
 </body>
 </html>
+

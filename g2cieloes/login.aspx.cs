@@ -52,9 +52,9 @@ namespace g2cieloes
             User user = new User();
 
             string query = @"
-                SELECT userID, user_fname, RegistrationDate, user_password
-                FROM userinfo
-                WHERE user_email = @UsernameOrEmail";
+        SELECT userID, user_fname, user_lname, user_email, RegistrationDate, user_password, user_xp, user_hearts
+        FROM userinfo
+        WHERE user_email = @UsernameOrEmail";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -66,10 +66,14 @@ namespace g2cieloes
 
                 if (reader.Read())
                 {
-                    user.user_id = reader.GetInt32(0);
-                    user.user_fname = reader.GetString(1);
-                    user.registration_date = reader.GetDateTime(2);
-                    user.Password = reader.GetString(3);
+                    user.UserId = reader.GetInt32(0);
+                    user.FirstName = reader.GetString(1);
+                    user.LastName = reader.GetString(2);
+                    user.Email = reader.GetString(3);
+                    user.RegistrationDate = reader.GetDateTime(4);
+                    user.Password = reader.GetString(5);
+                    user.UserXP = reader.GetInt32(6);
+                    user.UserHearts = reader.GetInt32(7);
                 }
 
                 reader.Close();
@@ -77,6 +81,7 @@ namespace g2cieloes
 
             return user;
         }
+
 
         private bool IsValidLogin(string connectionString, string email, string password)
         {
@@ -97,11 +102,14 @@ namespace g2cieloes
         private string GetGoogleAuthorization()
         {
             string clientId = "160524548544-g5m3905r30lalf7usvnh822kpl0skq2r.apps.googleusercontent.com";
-            string redirectUri = "https://localhost:44331/Learn";
+            string redirectUri = "https://cieloes.somee.com/Learn";
             string scope = "email profile openid";
 
-            string url = $"https://accounts.google.com/o/oauth2/auth?" + $"client_id={clientId}&" + $"redirect_uri={redirectUri}&" + $"scope={scope}&" + $"response_type=code";
-
+            string url = $"~" +
+                         $"client_id={clientId}&" +
+                         $"redirect_uri={redirectUri}&" +
+                         $"scope={scope}&" +
+                         $"response_type=code";
             return url;
         }
     }

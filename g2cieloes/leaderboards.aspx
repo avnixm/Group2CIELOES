@@ -162,16 +162,16 @@
               </main> 
         </div>
 
-            <div class="xp_hearts">
-                <div class="xp">
-                    <img src="Content/images/icons/exp.svg">
-                     <h2>1100</h2>
-                </div>
-                <div class="hearts">
-                     <img src="Content/images/icons/hearts.svg">
-                     <h2>3</h2>
-                </div>
-             
+             <div class="xp_hearts">
+            <div class="xp">
+                <img src="Content/images/icons/exp.svg"/>
+                <asp:Label ID="userxplabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
+            </div>
+            <div class="hearts">
+                <img src="Content/images/icons/hearts.svg"/>
+                <asp:Label ID="userheartslabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
             </div>
         </div>
+             
+            </div>
 </asp:Content>

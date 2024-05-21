@@ -15,9 +15,9 @@ namespace g2cieloes
             {
                 User currentUser = Session["User"] as User;
 
-                if (currentUser != null && !string.IsNullOrEmpty(currentUser.user_fname))
+                if (currentUser != null && !string.IsNullOrEmpty(currentUser.FirstName))
                 {
-                    profileLink.InnerHtml = "<i class=\"fas fa-user\"></i> " + currentUser.user_fname;
+                    profileLink.InnerHtml = "<i class=\"fas fa-user\"></i> " + currentUser.FirstName;
                 }
                 else
                 {

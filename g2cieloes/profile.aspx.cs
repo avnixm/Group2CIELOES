@@ -13,11 +13,15 @@ namespace g2cieloes
         {
             if (!IsPostBack)
             {
+
+                DisplayUserXPAndHearts();
+                DisplayNameAndJoinDate();
+
                 User currentUser = Session["User"] as User;
 
-                if (currentUser != null && !string.IsNullOrEmpty(currentUser.user_fname))
+                if (currentUser != null && !string.IsNullOrEmpty(currentUser.FirstName))
                 {
-                    profileLink.InnerHtml = "<i class=\"fas fa-user\"></i> " + currentUser.user_fname;
+                    profileLink.InnerHtml = "<i class=\"fas fa-user\"></i> " + currentUser.FirstName;
                 }
                 else
                 {
@@ -29,6 +33,27 @@ namespace g2cieloes
         protected void logoutbtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
+        }
+
+        private void DisplayUserXPAndHearts()
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                userxplabel.Text = $"{user.UserXP}";
+                userheartslabel.Text = $"{user.UserHearts}";
+            }
+        }
+
+        private void DisplayNameAndJoinDate()
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                string fullName = $"{user.FirstName} {user.LastName}";
+                firstnamelabel.Text = fullName;
+                datejoinedlabel.Text = $"Date Joined: {user.RegistrationDate.ToString("MMM dd, yyyy")}";
+            }
         }
     }
 }

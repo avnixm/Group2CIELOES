@@ -11,7 +11,20 @@ namespace g2cieloes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                DisplayUserXPAndHearts();
+            }
+        }
 
+        private void DisplayUserXPAndHearts()
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                userxplabel.Text = $"{user.UserXP}";
+                userheartslabel.Text = $"{user.UserHearts}";
+            }
         }
     }
 }

@@ -219,6 +219,9 @@
     <None Include="Properties\PublishProfiles\cieloes-001-site1 - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile4.pubxml" />
     <None Include="Properties\PublishProfiles\g2cieloes-001-site1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\g2cieloes-001-site1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\g2cieloes20240417180750 - Web Deploy.pubxml" />
@@ -229,6 +232,7 @@
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\removesomeeads.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />

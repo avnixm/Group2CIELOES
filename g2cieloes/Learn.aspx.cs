@@ -14,7 +14,7 @@ namespace g2cieloes
         {
             if (!IsPostBack)
             {
-                
+                DisplayUserXPAndHearts();
             }
         }
 
@@ -26,6 +26,16 @@ namespace g2cieloes
         protected void Button1_Click1(object sender, ImageClickEventArgs e)
         {
 
+        }
+
+        private void DisplayUserXPAndHearts()
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                userxplabel.Text = $"{user.UserXP}";
+                userheartslabel.Text = $"{user.UserHearts}";
+            }
         }
     }
 }

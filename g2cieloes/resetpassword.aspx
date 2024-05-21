@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="resetpassword.aspx.cs" Inherits="g2cieloes.resetpassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <link rel="stylesheet" href="Content/reset.css" />
-
+    <script src="removesomeeads.js"></script>
      <section class="reset">
         <div class="reset-modal" id="rest-modal">
             <div class="reset-container">
