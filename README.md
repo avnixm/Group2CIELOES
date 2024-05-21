@@ -13,6 +13,8 @@ and engaging content.</h3>
   <li>Contact Us Page: Users can reach out for support, feedback, or inquiries regarding the platform.</li>
   <li>Sign Up Functionality: Backend functionality securely stores user data upon registration.</li>
   <li>Login Functionality: A secure authentication system verifies user credentials and grants access to the platform's features.</li>
+  <li>Registration OTP: A secure way of verifying the users email.</li>
+  <li>Password Reset w/ OTP: A secure way to reset the users password.</li>
 </ul>
 
 
@@ -36,12 +38,20 @@ and engaging content.</h3>
 ![image](https://github.com/avnixm/CIELOES/assets/111229786/860b95ad-4218-4e28-8244-2858b3ce214e)
 
 <h2>Sign Up OTP Verification</h2>
+<h3>We moved from Javascript OTP to C#</h3>
 
-![image](https://github.com/avnixm/CIELOES/assets/111229786/502b0611-0d2a-495a-bada-2d178d717ae5)
+![image](https://github.com/avnixm/Group2CIELOES/assets/111229786/6360cb47-e0e6-444b-b475-b83618e27cef)
+
 
 <h2>Login Page</h2>
 
-![image](https://github.com/avnixm/CIELOES/assets/111229786/ac26982a-b149-452f-8096-346990db71cf)
+![image](https://github.com/avnixm/Group2CIELOES/assets/111229786/6dd07d38-66ba-4f4d-9052-53cd3658cb0b)
+
+
+<h2>Password Reset Page</h2>
+
+![image](https://github.com/avnixm/Group2CIELOES/assets/111229786/e348cce1-4f27-4ea9-b6d5-16306826aff3)
+
 
 <h1>Main Page</h1>
 <h2>Learn Page</h2>
