@@ -1,0 +1,276 @@
+﻿/* Root Variables */
+:root {
+    --text: #060705;
+    --background: #f5f8f4;
+    --primary: #79b751;
+    --secondary: #aade89;
+    --accent: #89e251;
+    --big-font: 3.5rem;
+    --h2-font: 2.5rem;
+    --p-font: 1.5rem;
+}
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/* Sidebar */
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar {
+    width: 17%;
+    height: 100%;
+    background: var(--background);
+    padding: 35px 0px;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.wrapper .sidebar .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar .logo-container img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.wrapper .sidebar .logo-container h2,
+.wrapper .sidebar h2 {
+    color: var(--primary);
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 1000;
+}
+
+.wrapper .sidebar ul {
+    padding: 0;
+}
+
+.wrapper .sidebar ul li {
+    font-size: 15px;
+    color: #fff;
+    background-color: var(--background);
+    min-width: 90%;
+    margin: 10px;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.wrapper .sidebar ul li a {
+    color: #545454;
+    font-weight: 600;
+    margin-left: 20%;
+    text-decoration: none; 
+}
+
+.wrapper .sidebar ul li a .fas {
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover {
+    background-color: #e8e8e8;
+}
+
+.wrapper .sidebar ul li:hover a {
+    color: #545454;
+    text-decoration: none; 
+}
+
+.wrapper .sidebar ul li.active {
+    border-color: var(--primary);
+    border: 3px solid var(--primary);
+    color: var(--primary);
+}
+
+.wrapper .main_content {
+    width: 90%;
+    margin-left: 100px;
+}
+
+.main_content {
+    padding:4%;
+  width: 80vw;
+  height: 75vh;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: .8rem;
+  overflow: hidden;
+  margin-top: 7%;
+  margin-left: 10%;
+  position: absolute;
+}
+
+.content {
+  margin-top: 5%;
+  margin-left: 65px;
+  padding: 5px;
+}
+
+.content h1{
+  padding:10px 0 0 25px;
+}
+
+.content__header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: .8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__body {
+  width: 95%;
+  height: calc(89% - 1.6rem);
+  background-color: #fffb;
+  margin: .8rem auto;
+  border-radius: .6rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#leaderboard-content {
+  display: block;
+}
+
+/* Table Container Styles */
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Leaderboard Table Styles */
+table {
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+thead th,
+tbody td {
+  padding: 15px;
+  text-align: left;
+}
+
+thead th {
+  color: #fff;
+  position: sticky;
+  top: 0;
+  background-color: #3cb521fe;
+  cursor: pointer;
+  text-transform: capitalize;
+  width: calc(100% / 3);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tbody tr {
+  --delay: .1s;
+  transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: .2s ease-in-out .5s;
+}
+
+/* Sorting Styles */
+thead th:hover span.icon-arrow {
+  border: 1.4px solid #22a900;
+}
+
+thead th:hover {
+  color: #006520;
+}
+
+thead th.active span.icon-arrow {
+  background-color: #00892c;
+  color: #fff;
+}
+
+thead th.asc span.icon-arrow {
+  transform: rotate(180deg);
+}
+
+thead th.active,
+tbody td.active {
+  color: #1cb44c;
+}
+
+thead th span.icon-arrow {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 1.4px solid transparent;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: .5rem;
+  transition: .2s ease-in-out;
+}
+
+.xp_hearts {
+    display: flex;
+    align-items: center;
+    margin-left: -4.5%;
+    margin-top: -3.2%;
+}
+
+.xp_hearts .xp {
+    margin-right: 60px;
+}
+
+.xp_hearts .xp,
+.xp_hearts .hearts {
+    display: flex;
+    align-items: center;
+}
+
+.xp_hearts .xp img,
+.xp_hearts .hearts img {
+    height: 30px;
+    margin-right: 15px;
+}

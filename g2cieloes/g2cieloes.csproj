@@ -182,8 +182,9 @@
     <Content Include="Content\images\intermediate.png" />
     <Content Include="Content\images\phone3D.png" />
     <Content Include="Content\images\wordwiselogo.png" />
-    <Content Include="Content\leaderboards.css" />
+    <Content Include="Content\leaderboard1.css" />
     <Content Include="Content\mediaqueries.css" />
+    <Content Include="Content\practice.css" />
     <Content Include="Content\profile.css" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\shop.css" />
@@ -197,6 +198,7 @@
     <Content Include="leaderboards.aspx" />
     <Content Include="Learn.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="practice.aspx" />
     <Content Include="profile.aspx" />
     <Content Include="resetpassword.aspx" />
     <Content Include="resetsuccess.aspx" />
@@ -306,6 +308,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practice.aspx.cs">
+      <DependentUpon>practice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practice.aspx.designer.cs">
+      <DependentUpon>practice.aspx</DependentUpon>
     </Compile>
     <Compile Include="profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>

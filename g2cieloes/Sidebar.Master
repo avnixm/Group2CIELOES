@@ -31,7 +31,7 @@
             </div>
             <ul>
                 <li><a href="Learn.aspx"><i class="fas fa-book"></i> Learn</a></li>
-                <li><a href="#"><i class="fas fa-pen"></i> Practice</a></li>
+                <li><a href="practice.aspx"><i class="fas fa-pen"></i> Practice</a></li>
                 <li><a href="leaderboards.aspx" id="leaderboard-btn"><i class="fas fa-trophy"></i> Leaderboards</a></li>
                 <li><a href="shop.aspx"><i class="fas fa-shopping-cart"></i> Shop</a></li>
                 <li runat="server" id="profileListItem"><a id="profileLink" runat="server" href="profile.aspx"><i class="fas fa-user"></i> Profile</a></li>

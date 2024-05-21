@@ -13,6 +13,7 @@ namespace g2cieloes
         {
             if (!IsPostBack)
             {
+
                 User currentUser = Session["User"] as User;
 
                 if (currentUser != null && !string.IsNullOrEmpty(currentUser.FirstName))
