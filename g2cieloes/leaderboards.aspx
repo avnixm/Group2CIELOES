@@ -22,6 +22,7 @@
                 <th>RANK</th>
                 <th>USERNAME</th>
                 <th>SCORE</th>
+                <th>REWARD</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,13 +30,14 @@
                 <td>1</td>
                 <td>Zinzu Chan Lee</td>
                 <td>5000</td>
+                <td><img src="https://d35aaqx5ub95lt.cloudfront.net/images/icons/47112600732328e46768927036578c8b.svg" class="icon">Double or Nothing</td>
                 </tr>
 
                     <tr>
                     <td> 2 </td>
                     <td>Zinzuedere</td>
                     <td> 4500 </td>
-                    <td>
+                    <td><img src="https://d35aaqx5ub95lt.cloudfront.net/images/icons/216ddc11afcbb98f44e53d565ccf479e.svg" class="icon">Streak Freeze</td>
                 </tr>
                 
                 <tr>
