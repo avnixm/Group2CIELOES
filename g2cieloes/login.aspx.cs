@@ -101,8 +101,8 @@ namespace g2cieloes
 
         private string GetGoogleAuthorization()
         {
-            string clientId = "160524548544-g5m3905r30lalf7usvnh822kpl0skq2r.apps.googleusercontent.com";
-            string redirectUri = "https://cieloes.somee.com/Learn";
+            string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
+            string redirectUri = "https://cieloes.me/Learn";
             string scope = "email profile openid";
 
             string url = $"~" +
