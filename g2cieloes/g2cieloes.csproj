@@ -121,6 +121,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\admin.css" />
+    <Content Include="Admin\adminlesson.aspx" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\students.aspx" />
+    <Content Include="Admin\teachers.aspx" />
     <Content Include="contactform.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -208,6 +213,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Admin\adminSide.Master" />
     <None Include="Properties\PublishProfiles\burdoy-001-site1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\burdoy-001-site1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\cieloes - Web Deploy.pubxml" />
@@ -271,6 +277,42 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.cs" />
+    <Compile Include="Admin\adminSide.Master.cs">
+      <DependentUpon>adminSide.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminSide.Master.designer.cs">
+      <DependentUpon>adminSide.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminlesson.aspx.cs">
+      <DependentUpon>adminlesson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminlesson.aspx.designer.cs">
+      <DependentUpon>adminlesson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\students.aspx.cs">
+      <DependentUpon>students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\students.aspx.designer.cs">
+      <DependentUpon>students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\teachers.aspx.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\teachers.aspx.designer.cs">
+      <DependentUpon>teachers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="contactform.aspx.cs">

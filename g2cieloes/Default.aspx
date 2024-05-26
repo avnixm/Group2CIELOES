@@ -76,6 +76,10 @@
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             </ul>
+
+            <ul>
+            <li style="margin-bottom:10px; color:white; text-decoration:underline;"><a href="Admin/login.aspx">Admin Login</a></li>
+            </ul>
         </div>
         <div class="footer-bottom">
             <p>&copy; <%= DateTime.Now.Year %> - CIELOES</p>

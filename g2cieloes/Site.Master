@@ -46,7 +46,7 @@
         </asp:ScriptManager>
 
         <header>
-            <img src="Content/images/wordwiselogo.png" class="logo-image">
+            <img src="/Content/images/wordwiselogo.png" class="logo-image">
             <a href="Default.aspx" class="logo-text">CIELOES</a>
         </header>
         <div class="container body-content">

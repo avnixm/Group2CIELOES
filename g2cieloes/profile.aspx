@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="Content/homepage.css" />
     <link rel="stylesheet" href="Content/profile.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+     <link href="~/faks.svg" rel="shortcut icon" type="image/x-icon" />
     <title>Profile</title>
 </head>
 <body>
@@ -128,7 +129,7 @@ if (selectedAvatarUrl) {
             }
             selectedOption = option;
             selectedOption.classList.add('selected');
-            updateSelectedAvatar(); // Update the selected avatar when an option is clicked
+            updateSelectedAvatar(); 
         }
 
         function updateSelectedAvatar() {
