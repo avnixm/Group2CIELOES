@@ -1,23 +1,21 @@
-﻿<%@ Page Title="Learn" Language="C#" MasterPageFile="~/Sidebar.Master" AutoEventWireup="true" CodeBehind="Learn.aspx.cs" Inherits="g2cieloes.Learn" %>
+<%@ Page Title="Learn" Language="C#" MasterPageFile="~/Sidebar.Master" AutoEventWireup="true" CodeBehind="Learn.aspx.cs" Inherits="g2cieloes.Learn" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="wrapper">
-    <div class="main_content">
+        <div class="main_content">
             <div class="search_box">
                 <input class="search-field" type="text" placeholder="Search for words...">
             </div>
             <div class="lesson_container">
-                <div class="spaceholder">
-                    
-                </div>
+                <div class="spaceholder"></div>
                 <div class="text_container">
-                <h2>Section 1</h2>
-                <h2>Use pronouns, make questions.</h2>
+                    <h2>Section 1</h2>
+                    <h2>Use pronouns, make questions.</h2>
                 </div>
                 <div class="flex_container">
                     <div class="unit_box">
-                        <asp:ImageButton ID="Button1" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
-                        <asp:ImageButton ID="Button2" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
+                        <asp:ImageButton ID="Button1" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" OnClick="Button1_Click" />
+                        <asp:ImageButton ID="Button2" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" OnClick="Button2_Click" />
                         <asp:ImageButton ID="Button3" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
                         <asp:ImageButton ID="Button4" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
                         <asp:ImageButton ID="Button5" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
@@ -27,7 +25,7 @@
                         <asp:ImageButton ID="Button9" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
         <div class="xp_hearts">
             <div class="xp">
@@ -61,6 +59,6 @@
         </div>
     </div>
     <script src="Scripts/script.js"></script>
+    
     <script src="Scripts/word_of_the_day.js"></script> 
-
 </asp:Content>
