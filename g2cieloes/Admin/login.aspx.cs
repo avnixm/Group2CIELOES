@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Net;
 using System.Net.Mail;
+using BCrypt.Net;
 
 namespace g2cieloes.Admin
 {
@@ -17,7 +18,7 @@ namespace g2cieloes.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void LoginBtn_Click(object sender, EventArgs e)
@@ -27,15 +28,15 @@ namespace g2cieloes.Admin
 
             if (isCaptchaValid)
             {
-                if (IsOtpVerified())
+                if (VerifiedBaOTP())
                 {
                     string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
                     string adminEmail = admin_email.Text;
                     string adminPassword = admin_password.Text;
 
-                    if (IsValidLogin(connectionString, adminEmail, adminPassword))
+                    if (CredentialValidation(connectionString, adminEmail, adminPassword))
                     {
-                        Admin admin = GetAdminDetails(connectionString, adminEmail);
+                        Admin admin = GetAdminInfo(connectionString, adminEmail);
 
                         Session["Admin"] = admin;
 
@@ -64,14 +65,13 @@ namespace g2cieloes.Admin
             }
         }
 
-
-        private bool IsOtpVerified()
+        private bool VerifiedBaOTP()
         {
             string userInput = otptext.Text;
             return userInput == otpValue;
         }
 
-        private Admin GetAdminDetails(string connectionString, string email)
+        private Admin GetAdminInfo(string connectionString, string email)
         {
             Admin admin = null;
 
@@ -110,13 +110,13 @@ namespace g2cieloes.Admin
             return admin;
         }
 
-        private bool IsValidLogin(string connectionString, string email, string password)
+        private bool CredentialValidation(string connectionString, string email, string password)
         {
-            Admin admin = GetAdminDetails(connectionString, email);
+            Admin admin = GetAdminInfo(connectionString, email);
 
-            if (admin != null && admin.Password == password)
+            if (admin != null)
             {
-                return true;
+                return BCrypt.Net.BCrypt.Verify(password, admin.Password);
             }
 
             return false;
@@ -128,7 +128,7 @@ namespace g2cieloes.Admin
 
             if (!string.IsNullOrEmpty(recipientEmail))
             {
-                otpValue = GenerateOTP();
+                otpValue = GawaOTP();
 
                 string fromMail = "cieloes.demo@gmail.com";
                 string fromPassword = "pmvvcsttjdwuepxa";
@@ -211,7 +211,7 @@ namespace g2cieloes.Admin
             }
         }
 
-        private string GenerateOTP()
+        private string GawaOTP()
         {
             Random rand = new Random();
             int otp = rand.Next(100000, 999999);
