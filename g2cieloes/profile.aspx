@@ -1,126 +1,237 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="g2cieloes.profile" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="g2cieloes.profile" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-        <link rel="stylesheet" href="Content/homepage.css" />
+    <link rel="stylesheet" href="Content/homepage.css" />
     <link rel="stylesheet" href="Content/profile.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-     <link href="~/faks.svg" rel="shortcut icon" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="~/faks.svg" rel="shortcut icon" type="image/x-icon" />
     <title>Profile</title>
 </head>
+
+    <style>
+        #p_username {
+            position:relative;
+            margin-left: 30px;
+        }
+       
+        #ctr {
+            position: absolute;
+            margin-left: 130px;
+            margin-top: 40px;
+        }
+
+        .account {
+            background-color:#f5f8f4;
+            height: 400px;
+            width: 890px;
+            position: absolute;
+            right: 10px;
+            top: 110%;
+        }
+
+        #acct{
+            font-weight: 900;
+        }
+
+        /* Custom TextBox Styles */
+        .custom-textbox {
+            background-color: var(--background);
+            border: none;
+            width: 50%;
+            border-radius: 1rem;
+            padding: 10px;
+            border: 1px solid grey;
+            margin-bottom: 15px;
+            margin-left: 200px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .lbusername {
+            margin-top: 35px;
+            margin-left: 120px;
+            font-weight: 500;
+            font-size:large;
+        }
+
+        .lbname {
+            position:absolute;
+            margin-top: 115px;
+             margin-left: -523px;
+             font-weight: 500;
+            font-size:large;
+        }
+
+        #namelb{
+            font-weight: bold;
+        }
+
+        #savebtn{
+            position: absolute;
+            color: #fff;
+            background-color: var(--primary);
+            width: 100px;
+            border-radius: 16px;
+            border: 1px solid var(--accent);
+            border-bottom: 4px solid #248627bd;
+            margin: 10px;
+            transition: all 0.1s;
+            padding: 15px 15px;
+            cursor: pointer;
+            border-radius: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40px;
+            margin-top: -120px;
+        }
+
+        #savebtn:hover {
+            color: var(--text);
+            background-color: var(--secondary);
+            border-color: #4c8128;
+        }
+
+        #savebtn:active {
+            border-bottom: 2px solid #4c8128;
+        }
+
+        #logoutbtn{
+            color: #fff;
+            background-color: var(--primary);
+            position: absolute;
+            width: 100px;
+            border-radius: 16px;
+            border: 1px solid var(--accent);
+            border-bottom: 4px solid #248627bd;
+            transition: all 0.1s;
+            padding: 15px 15px;
+            cursor: pointer;
+            border-radius: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin-left: 200px;
+            margin-top:250px;
+            position: absolute; 
+        }
+
+        #logoutbtn:hover {
+            color: var(--text);
+            background-color: var(--secondary);
+            border-color: #4c8128;
+        }
+
+        #logoutbtn:active {
+            border-bottom: 2px solid #4c8128;
+        }
+    </style>
+
 <body>
-    <div class="wrapper">
-
-        <div class="xp_hearts">
-            <div class="xp">
-                <img src="Content/images/icons/exp.svg"/>
-                <asp:Label ID="userxplabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
-            </div>
-            <div class="hearts">
-                <img src="Content/images/icons/hearts.svg"/>
-                <asp:Label ID="userheartslabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <div class="logo-container">
-                <img src="Content/images/wordwiselogo.png" alt="Logo"/>
-                <h2>CIELOES</h2>
-                <hr/>
-            </div>
-            <ul>
-                <li><a href="Learn.aspx"><i class="fas fa-book"></i> Learn</a></li>
-                <li><a href="practice.aspx"><i class="fas fa-pen"></i> Practice</a></li>
-                <li><a href="leaderboards.aspx" id="leaderboard-btn"><i class="fas fa-trophy"></i> Leaderboards</a></li>
-                <li><a href="shop.aspx"><i class="fas fa-shopping-cart"></i> Shop</a></li>
-                 <li runat="server" id="profileListItem"><a id="profileLink" runat="server" href="profile.aspx"><i class="fas fa-user" class="active"></i> Profile</a></li>
-            </ul> 
-        </div>
-
-    <div class="main_content">
-        <div class="profilemain">
-            <div class="avatardv">
-                
-                <button class="editbtn" onclick="toggleAvatarForm()">edit</button>
-                <div class="selected-avatar" id="selectedAvatar">
-                   
-                    <img src="Content/images/avatarboy1.png" alt="Selected Avatar"/>
+    <form id="mainForm" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+        <div class="wrapper">
+            <div class="xp_hearts">
+                <div class="xp">
+                    <img src="Content/images/icons/exp.svg"/>
+                    <asp:Label ID="userxplabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
+                </div>
+                <div class="hearts">
+                    <img src="Content/images/icons/hearts.svg"/>
+                    <asp:Label ID="userheartslabel" runat="server" Text="" Font-Bold="True" style="font-size: 2rem"></asp:Label>
                 </div>
             </div>
 
-            <div class="rank">
-                <div class="rkdv">
-                    <p id="ctr">Current Rank</p>
+            <div class="sidebar">
+                <div class="logo-container">
+                    <img src="Content/images/wordwiselogo.png" alt="Logo"/>
+                    <h2>CIELOES</h2>
+                    <hr/>
                 </div>
-            </div>
-            <br />
-           <asp:Label ID="firstnamelabel" runat="server" Text="Name" Font-Bold="True" style="margin-top: 10%;font-size: 2rem;"></asp:Label>
-            <br />
-            <asp:Label ID="datejoinedlabel" runat="server" Text="Date Joined" style="margin-top:10%;"></asp:Label>
-
-
-            <h2 id="statistics"></h2>
-            <div class="daystreak">
-                <div class="streak-sts">
-                    <p id="tsp">Total Streak</p>
-                </div>
-                <p id="tspdb">get from database</p>
+                <ul>
+                    <li><a href="Learn.aspx"><i class="fas fa-book"></i> Learn</a></li>
+                    <li><a href="practice.aspx"><i class="fas fa-pen"></i> Practice</a></li>
+                    <li><a href="leaderboards.aspx" id="leaderboard-btn"><i class="fas fa-trophy"></i> Leaderboards</a></li>
+                    <li><a href="shop.aspx"><i class="fas fa-shopping-cart"></i> Shop</a></li>
+                    <li runat="server" id="profileListItem"><a id="profileLink" runat="server" href="profile.aspx"><i class="fas fa-user" class="active"></i> Profile</a></li>
+                </ul> 
             </div>
 
-            <div class="account">
-                <h2 id="acct">Account</h2>
-                <div class="lbusername"> <label id="usernameLabel">Email</label></div>
-                <div class="lbname"> <label id="nameLabel">Name</label></div>
-                <div class="lbemail"> <label id="emailLabel">Password</label></div>
-                   
-                <input type="text" id="p-username"/>
-                <input type="text" id="p-name"/>
-                <input type="text" id="p-email"/>
-                <button id="savebtn">Save</button>
-                    
-                <form action="#" runat="server" method="post"> 
-                    <asp:Button ID="logoutbtn" runat="server" Text="Log out" OnClick="logoutbtn_Click" />>
-
-                </form>
-            </div>
-        
-            <div class="modal-overlay" id="modalOverlay">
-                <div class="modal-content">
-                    <h2>Select Avatar</h2>
-                    <form id="avatarForm" onsubmit="return updateAvatar()">
-                        <div id="avatarOptions">
-                            <img src="Content/images/avatarboy1.png" alt="Fox" class="avatar-option selected" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatarboy2.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatarboy3.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatarboy4.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatarboy5.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatargirl1.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatargirl2.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatargirl3.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatargirl4.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <img src="Content/images/avatargirl5.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
-                            <button id="closebtn" type="submit">close</button>
+            <div class="main_content">
+                <div class="profilemain">
+                    <div class="avatardv">
+                        <button class="editbtn" type="button" onclick="toggleAvatarForm()">edit</button>
+                        <div class="selected-avatar" id="selectedAvatar">
+                            <img src="Content/images/avatarboy1.png" alt="Selected Avatar"/>
                         </div>
-                        
-                    </form>
+                    </div>
+
+                    <div class="rank">
+                        <div class="rkdv">
+                            <p id="ctr">Current Rank</p>
+                        </div>
+                    </div>
+                    <br />
+                    <asp:Label ID="firstnamelabel" runat="server" Text="Name" Font-Bold="True" style="margin-top: 10%;font-size: 2rem;"></asp:Label>
+                    <br />
+                    <asp:Label ID="datejoinedlabel" runat="server" Text="Date Joined" style="margin-top:10%;"></asp:Label>
+
+                    <h2 id="statistics"></h2>
+                    <div class="daystreak">
+                        <div class="streak-sts">
+                            <p id="tsp">Total Streak</p>
+                        </div>
+                        <p id="tspdb">get from database</p>
+                    </div>
+
+                    <div class="account">
+                        <h2 id="acct">Account</h2>
+                          <label class="lbusername" for="p_username">Email</label>
+                         <asp:TextBox ID="p_username" runat="server" CssClass="custom-textbox" />
+
+                         <label class="lbname" for="p_name">Name</label>
+                         <asp:TextBox ID="p_name" runat="server" CssClass="custom-textbox" />
+                        <asp:Button ID="savebtn" runat="server" Text="Save" OnClick="SaveChanges" />
+                    </div>
+
+                    <asp:Button ID="logoutbtn" runat="server" Text="Log out" OnClick="logoutbtn_Click" />
+
+                    <div class="modal-overlay" id="modalOverlay">
+                        <div class="modal-content">
+                            <h2>Select Avatar</h2>
+                            <form id="avatarForm" onsubmit="return updateAvatar()">
+                                <div id="avatarOptions">
+                                    <img src="Content/images/avatarboy1.png" alt="Fox" class="avatar-option selected" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatarboy2.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatarboy3.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatarboy4.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatarboy5.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatargirl1.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatargirl2.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatargirl3.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatargirl4.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <img src="Content/images/avatargirl5.png" alt="CAIEL" class="avatar-option" onclick="selectOption(this)"/>
+                                    <button id="closebtn" type="submit">close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>        
-</div>   
+        </div>   
+    </form>
 
     <script>
+        // Retrieve the selected avatar URL from local storage
+        var selectedAvatarUrl = localStorage.getItem('selectedAvatarUrl');
 
-          // Retrieve the selected avatar URL from local storage
-          var selectedAvatarUrl = localStorage.getItem('selectedAvatarUrl');
-
-// Set the initial avatar image
-if (selectedAvatarUrl) {
-    document.getElementById('selectedAvatar').innerHTML = '<img src="' + selectedAvatarUrl + '" alt="Selected Avatar">';
-}
+        // Set the initial avatar image
+        if (selectedAvatarUrl) {
+            document.getElementById('selectedAvatar').innerHTML = '<img src="' + selectedAvatarUrl + '" alt="Selected Avatar">';
+        }
         var selectedOption = document.querySelector('.avatar-option.selected');
 
         function selectOption(option) {
@@ -129,13 +240,14 @@ if (selectedAvatarUrl) {
             }
             selectedOption = option;
             selectedOption.classList.add('selected');
-            updateSelectedAvatar(); 
+            updateSelectedAvatar();
         }
 
         function updateSelectedAvatar() {
             var selectedAvatar = document.getElementById('selectedAvatar');
             var selectedImageUrl = selectedOption.src;
             selectedAvatar.innerHTML = '<img src="' + selectedImageUrl + '" alt="Selected Avatar">';
+            localStorage.setItem('selectedAvatarUrl', selectedImageUrl); // Save selected avatar URL to local storage
         }
 
         function updateAvatar() {
@@ -158,32 +270,54 @@ if (selectedAvatarUrl) {
             modal.style.display = 'none'; // Hide the modal overlay
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-    var lis = document.querySelectorAll('.wrapper .sidebar ul li');
-    lis.forEach(function(li) {
-        li.addEventListener('click', function() {
-            lis.forEach(function(item) {
-                item.classList.remove('active');
+        document.addEventListener('DOMContentLoaded', function () {
+            var lis = document.querySelectorAll('.wrapper .sidebar ul li');
+            lis.forEach(function (li) {
+                li.addEventListener('click', function () {
+                    lis.forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
             });
-            this.classList.add('active');
         });
-    });
-});
 
-        window.addEventListener('scroll', function() {
-    var container1 = document.querySelector('.text_container');
-    var container2 = document.querySelector('.text_container_2');
-    var rect1 = container1.getBoundingClientRect();
-    var rect2 = container2.getBoundingClientRect();
-    if (rect2.top < 0) {
-        container2.style.position = 'sticky';
-        container2.style.top = '15px';
-    } else {
-        container2.style.position = 'relative';
-    }
-});
+        window.addEventListener('scroll', function () {
+            var container1 = document.querySelector('.text_container');
+            var container2 = document.querySelector('.text_container_2');
+            var rect1 = container1.getBoundingClientRect();
+            var rect2 = container2.getBoundingClientRect();
+            if (rect2.top < 0) {
+                container2.style.position = 'sticky';
+                container2.style.top = '15px';
+            } else {
+                container2.style.position = 'relative';
+            }
+        });
 
+        function saveChanges() {
+            var newEmail = $('#<%= p_username.ClientID %>').val();
+     var newName = $('#<%= p_name.ClientID %>').val();
+            $.ajax({
+                type: "POST",
+                url: "profile.aspx/SaveChanges",
+                data: JSON.stringify({ newEmail: newEmail, newName: newName }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    if (response.d.success) {
+                        $('#<%= firstnamelabel.ClientID %>').text(response.d.newName);
+                        alert('Changes saved successfully!');
+                    } else {
+                        alert('Error saving changes: ' + response.d.errorMessage);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('AJAX error: ' + error);
+                }
+            });
+     return false; // Prevent the default postback
+ }
     </script>
 </body>
 </html>
-
