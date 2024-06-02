@@ -8,6 +8,15 @@ namespace g2cieloes
 {
     public partial class login : System.Web.UI.Page
     {
+
+      protected void GoogleLoginButton_Click(object sender, EventArgs e)
+        {
+            Context.GetOwinContext().Authentication.Challenge(new AuthenticationProperties
+            {
+                RedirectUri = "/GoogleCallback.aspx"
+            }, "Google");
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -94,23 +103,28 @@ namespace g2cieloes
             return false;
         }
 
+
+        
         protected void googleLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect(GetGoogleAuthorization());
         }
 
-        private string GetGoogleAuthorization()
-        {
-            string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
-            string redirectUri = "https://cieloes.me/Learn";
-            string scope = "email profile openid";
+      private string GetGoogleAuthorization()
+{
+        string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
+        string redirectUri = Server.UrlEncode("https://cieloes.me/Learn"); // Ensure correct redirect URI
 
-            string url = $"~" +
-                         $"client_id={clientId}&" +
-                         $"redirect_uri={redirectUri}&" +
-                         $"scope={scope}&" +
-                         $"response_type=code";
-            return url;
-        }
+        string scope = "email profile openid";
+
+        string url = $"https://accounts.google.com/o/oauth2/auth?" +
+                 $"client_id={clientId}&" +
+                 $"redirect_uri={redirectUri}&" +
+                 $"scope={scope}&" +
+                 $"response_type=code&" +
+                 $"state={state}";
+    return url;
+}
+
     }
 }
