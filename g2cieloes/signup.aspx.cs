@@ -44,8 +44,8 @@ namespace g2cieloes
                         command.Parameters.AddWithValue("@LName", userlname);
                         command.Parameters.AddWithValue("@Email", useremail);
                         command.Parameters.AddWithValue("@Password", userpassword);
-                        command.Parameters.AddWithValue("@UserXP", 0);
-                        command.Parameters.AddWithValue("@UserHearts", 0);
+                        command.Parameters.AddWithValue("@UserXP", 100);
+                        command.Parameters.AddWithValue("@UserHearts", 5);
                         command.Parameters.AddWithValue("@IsActivated", 1);
 
                         connection.Open();

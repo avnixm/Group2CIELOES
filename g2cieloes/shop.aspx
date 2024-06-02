@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Shop" Language="C#" MasterPageFile="~/Sidebar.Master" AutoEventWireup="true" CodeBehind="shop.aspx.cs" Inherits="g2cieloes.shop" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <link rel="stylesheet" href="Content/shop.css"/>
+   <link rel="stylesheet" href="Content/shopiii.css"/>
     <div class="wrapper">
          <div class="xp_hearts">
             <div class="xp">
@@ -32,11 +32,11 @@
             <hr>
             <div class="heart-container">
                 <img class="heart" src="https://d35aaqx5ub95lt.cloudfront.net/images/hearts/4f3842c690acf9bf0d4b06e6ab2fffcf.svg">
-                <h4>Unlimited Hearts</h4>
-                <p>Never run out of hearts with Super!</p><br>
+                <h4>Discounted Hearts!</h4>
+                <p>Buy 10 hearts with a 10% discount!</p><br>
                 <div class="box1">
                     <button class="custom-button1">
-                        <b><span class="icon">FREE TRIAL</span></b>
+                        <asp:Button ID="buy10hearts" runat="server" Text="Buy 10 hearts for 45XP!" OnClick="buy10hearts_Click" style="border:none;"/>
                     </button>
                 </div>
             </div>

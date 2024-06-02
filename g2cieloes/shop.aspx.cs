@@ -68,5 +68,27 @@ namespace g2cieloes
             }
         }
 
+        protected void buy10hearts_Click(object sender, EventArgs e)
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                int xpCost = 45;
+                int heartsToAdd = 10;
+
+                if (user.UserXP >= xpCost)
+                {
+                    user.UserXP -= xpCost;
+                    user.UserHearts += heartsToAdd;
+                    UpdateUserInDatabase(user);
+                    Session["User"] = user;
+                    DisplayUserXPAndHearts();
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Not enough XP!');", true);
+                }
+            }
+        }
     }
 }
