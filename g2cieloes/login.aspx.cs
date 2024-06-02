@@ -127,7 +127,7 @@ namespace g2cieloes
                 string redirectUri = "https://cieloes.me/Learn";
                 string tokenUrl = "https://oauth2.googleapis.com/token";
                 string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
-                string clientSecret = "YOUR_CLIENT_SECRET";
+                string clientSecret = "YOUR_CLIENT_SECRET"; // palagay secret key dito par
         
                 using (var client = new WebClient())
                 {
