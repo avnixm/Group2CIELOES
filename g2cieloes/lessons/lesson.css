@@ -1,0 +1,190 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+div[style*="height: 65px;"] {
+    display: none;
+}
+
+div[style*="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; bottom: 0px; height: 65px; right: 0px; display: block; width: 100%; background-color: #202020; margin: 0px; padding: 0px;"] {
+    display: none !important;
+}
+
+center {
+    display: none !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+:root {
+    --text: #282828;
+    --background: #f5f8f4;
+    --primary: #79b751;
+    --secondary: #aade89;
+    --accent: #89e251;
+    --big-font: 3.5rem;
+    --h2-font: 2.5rem;
+    --p-font: 1.5rem;
+}
+
+*::selection {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+body {
+    color: var(--text);
+    background: var(--background);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: var(--background);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 2.9rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.xp,
+.hearts {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+    .xp img,
+    .hearts img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+
+.container {
+    display: flex;
+    margin-left: 20%;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 950px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.options-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fruit-image {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#QuestionLabel {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#OptionsList {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+
+#donebtn {
+    color: #fff;
+    background-color: var(--primary);
+    min-width: 20%;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    border-bottom: 4px solid #248627bd;
+    margin: 10px;
+    transition: all 0.1s;
+    display: inline-flex;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SubmitButton {
+    color: #fff;
+    background-color: var(--primary);
+    min-width: 30%;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    border-bottom: 4px solid #248627bd;
+    margin: 10px;
+    transition: all 0.1s;
+    display: inline-flex;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

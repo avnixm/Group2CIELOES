@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Shop" Language="C#" MasterPageFile="~/Sidebar.Master" AutoEventWireup="true" CodeBehind="shop.aspx.cs" Inherits="g2cieloes.shop" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="Content/shop.css"/>
+   <link rel="stylesheet" href="Content/shop.css"/>
     <div class="wrapper">
          <div class="xp_hearts">
             <div class="xp">
@@ -22,7 +22,9 @@
                 <p>Get full hearts so you can worry less about making mistakes in a lesson</p>
                 <div class="box1">
                     <button class="custom-button">
-                        <b><span class="icon">GET FOR: <img class="gem" src="https://d35aaqx5ub95lt.cloudfront.net/images/icons/f05a8cf23d961f0a220dec75b1dea1cf.svg">  350</span></b>
+                        <asp:ImageButton ID="ImageButton1" runat="server" CssClass="gem" ImageUrl="~/Content/images/getfor.png" style="width:120px; height:25px;" OnClick="ImageButton1_Click"/>
+
+                        
                     </button>
                 </div>
             </div>
@@ -46,7 +48,7 @@
                 <p>Streak Freeze allows your streak to remain in place for one full day of inactivity.</p>
                 <div class="box1">
                     <button class="custom-button2">
-                        <b><span class="icon">GET FOR: <img class="gem" src="https://d35aaqx5ub95lt.cloudfront.net/images/gems/45c14e05be9c1af1d7d0b54c6eed7eee.svg">  350</span></b>
+                        <b><span class="icon">GET FOR: <img class="gem" src="Content/images/icons/exp.svg">  350</span></b>
                     </button>
                 </div> 
             </div>
@@ -58,12 +60,11 @@
                 <p>Double your 50 gem wager by maintaining a 7 day streak.</p>
                 <div class="box1">
                     <button class="custom-button3">
-                        <b><span class="icon">GET FOR: <img class="gem" src="https://d35aaqx5ub95lt.cloudfront.net/images/gems/45c14e05be9c1af1d7d0b54c6eed7eee.svg">  350</span></b>
+                        <b><span class="icon">GET FOR: <img class="gem" src="Content/images/icons/exp.svg">  350</span></b>
                     </button>
                 </div> 
             </div>
         </div>
     </div>
 </div>
-
 </asp:Content>

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 0,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Lion", "Elephant" ],
+    "correct": "Dog",
+    "picture": "lesson_images/Dog.jpg"
+  },
+  {
+    "id": 1,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Lion", "Elephant" ],
+    "correct": "Cat",
+    "picture": "lesson_images/Cat.jpg"
+  },
+  {
+    "id": 2,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Lion", "Elephant" ],
+    "correct": "Lion",
+    "picture": "lesson_images/Lion.jpg"
+  },
+  {
+    "id": 3,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Lion", "Elephant" ],
+    "correct": "Elephant",
+    "picture": "lesson_images/Elephant.jpg"
+  },
+  {
+    "id": 4,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Lion", "Monkey" ],
+    "correct": "Monkey",
+    "picture": "lesson_images/Monkey.jpg"
+  },
+  {
+    "id": 5,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Lion", "Rabbit" ],
+    "correct": "Rabbit",
+    "picture": "lesson_images/Rabbit.jpg"
+  },
+  {
+    "id": 6,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Bear", "Elephant" ],
+    "correct": "Bear",
+    "picture": "lesson_images/Bear.jpg"
+  },
+  {
+    "id": 7,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Penguin", "Elephant" ],
+    "correct": "Penguin",
+    "picture": "lesson_images/PENGUIN.jpg"
+  },
+  {
+    "id": 8,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Giraffe", "Lion", "Elephant" ],
+    "correct": "Giraffe",
+    "picture": "lesson_images/Giraffe.jpg"
+  },
+  {
+    "id": 9,
+    "question": "Can you tell me what is shown in the image?",
+    "options": [ "Dog", "Cat", "Zebra", "Elephant" ],
+    "correct": "Zebra",
+    "picture": "lesson_images/ZEBRA.jpg"
+  }
+]

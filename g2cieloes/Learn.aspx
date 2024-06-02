@@ -3,9 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="wrapper">
         <div class="main_content">
-            <div class="search_box">
-                <input class="search-field" type="text" placeholder="Search for words...">
-            </div>
             <div class="lesson_container">
                 <div class="spaceholder"></div>
                 <div class="text_container">
@@ -16,7 +13,7 @@
                     <div class="unit_box">
                         <asp:ImageButton ID="Button1" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" OnClick="Button1_Click" />
                         <asp:ImageButton ID="Button2" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" OnClick="Button2_Click" />
-                        <asp:ImageButton ID="Button3" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
+                        <asp:ImageButton ID="Button3" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" OnClick="Button3_Click" />
                         <asp:ImageButton ID="Button4" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
                         <asp:ImageButton ID="Button5" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />
                         <asp:ImageButton ID="Button6" CssClass="unit_btn" runat="server" ImageUrl="~/Content/images/icons/star.svg" AlternateText="Star Icon" />

@@ -7,106 +7,185 @@ using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Web.Script.Serialization;
 using System.Web.Services;
-
+using System.IO;
+using Newtonsoft.Json;
 
 namespace g2cieloes.lessons
 {
 	public partial class lesson2 : System.Web.UI.Page
 	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
-            if (Session["User"] == null)
-            {
-                Response.Redirect("../login.aspx");
-            }
+        private List<QuizQuestion> quizQuestions;
+        private int currentQuestionIndex;
+        private int score;
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                DisplayUserXPAndHearts();
+                GetTheUserXP();
+                LoadQuizData();
+                currentQuestionIndex = 0;
+                score = 0;
+                Session["CurrentQuestionIndex"] = currentQuestionIndex;
+                Session["Score"] = score;
+                DisplayQuestion();
+            }
+        }
+
+        private void DisplayUserXPAndHearts()
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                userxpslabel.Text = $"{user.UserXP}";
+                userheartslabel.Text = $"{user.UserHearts}";
+            }
+        }
+
+        private void GetTheUserXP()
+        {
+            if (Session["User"] != null)
+            {
+                User user = (User)Session["User"];
+                userxptext.Text = $"{user.UserXP}";
+            }
         }
 
 
-        public static string SubmitResults(int score, string userId)
+
+        private void LoadQuizData()
         {
-            var response = new { success = false, message = "" };
+            string jsonFilePath = Server.MapPath("~/Content/Json/lesson2.json");
+            string jsonData = File.ReadAllText(jsonFilePath);
+            quizQuestions = JsonConvert.DeserializeObject<List<QuizQuestion>>(jsonData);
+            Session["QuizQuestions"] = quizQuestions;
+        }
 
-            if (score < 0 || string.IsNullOrEmpty(userId))
+        private void DisplayQuestion()
+        {
+            quizQuestions = (List<QuizQuestion>)Session["QuizQuestions"];
+            currentQuestionIndex = (int)Session["CurrentQuestionIndex"];
+            QuizQuestion question = quizQuestions[currentQuestionIndex];
+
+            QuestionLabel.Text = question.Question;
+            OptionsList.Items.Clear();
+            foreach (string option in question.Options)
             {
-                response = new { success = false, message = "Invalid input data." };
-                return new JavaScriptSerializer().Serialize(response);
+                ListItem listItem = new ListItem(option, option);
+                OptionsList.Items.Add(listItem);
             }
 
-            int currentXp = GetUserXp(userId);
-            if (currentXp == -1)
+            QuestionImage.ImageUrl = question.Picture;
+
+            score = (int)Session["Score"];
+            scoreLabel.Text = $"Score: {score}";
+        }
+
+        protected void SubmitButton_Click(object sender, EventArgs e)
+        {
+            quizQuestions = (List<QuizQuestion>)Session["QuizQuestions"];
+            currentQuestionIndex = (int)Session["CurrentQuestionIndex"];
+            score = (int)Session["Score"];
+
+            string selectedOption = OptionsList.SelectedValue;
+            QuizQuestion question = quizQuestions[currentQuestionIndex];
+
+            if (selectedOption == question.Correct)
             {
-                response = new { success = false, message = "Failed to retrieve current XP." };
-                return new JavaScriptSerializer().Serialize(response);
+                score++;
+                Session["Score"] = score;
             }
 
-            bool success = UpdateXp(score, userId);
-            if (success)
+            currentQuestionIndex++;
+            Session["CurrentQuestionIndex"] = currentQuestionIndex;
+
+            if (currentQuestionIndex < quizQuestions.Count)
             {
-                response = new { success = true, message = $"XP updated successfully! (Current XP: {currentXp + score})" };
+                DisplayQuestion();
             }
             else
             {
-                response = new { success = false, message = "Failed to update XP" };
+                QuestionPanel.Visible = false;
+                scoreLabel.Text = "Final Score: " + score;
+                UpdateUserXP(score);
+                donebtn.Visible = true;
+                SubmitButton.Visible = false;
             }
 
-            return new JavaScriptSerializer().Serialize(response);
+            scoreLabel.Text = $"Score: {score}";
         }
 
-        private static bool UpdateXp(int score, string userId)
+        private void UpdateUserXP(int finalScore)
         {
-            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
-            try
+            if (Session["User"] != null)
             {
+                User user = (User)Session["User"];
+                user.UserXP += finalScore;
+
+                string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    MySqlCommand command = new MySqlCommand("UPDATE userinfo SET user_xp = user_xp + @score WHERE userID = @userId", connection);
-                    command.Parameters.AddWithValue("@score", score);
-                    command.Parameters.AddWithValue("@userId", userId);
+                    string query = "UPDATE userinfo SET user_xp = @UserXP WHERE userID = @UserId";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@UserXP", user.UserXP);
+                    command.Parameters.AddWithValue("@UserId", user.UserId);
+
                     connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    return rowsAffected > 0;
+                    command.ExecuteNonQuery();
                 }
-            }
-            catch (Exception ex)
-            {
-                LogError(ex.Message);
-                return false;
+
+                userxpslabel.Text = $"{user.UserXP}";
+
+                Session["User"] = user;
             }
         }
 
-        private static int GetUserXp(string userId)
+        protected void OptionsList_PreRender(object sender, EventArgs e)
         {
-            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
+            quizQuestions = (List<QuizQuestion>)Session["QuizQuestions"];
+            currentQuestionIndex = (int)Session["CurrentQuestionIndex"];
+            QuizQuestion question = quizQuestions[currentQuestionIndex];
+
+            Dictionary<string, string> optionColors = new Dictionary<string, string>
                 {
-                    MySqlCommand command = new MySqlCommand("SELECT user_xp FROM userinfo WHERE userID = @userId", connection);
-                    command.Parameters.AddWithValue("@userId", userId);
-                    connection.Open();
-                    object result = command.ExecuteScalar();
-                    return result != null ? Convert.ToInt32(result) : -1;
-                }
-            }
-            catch (Exception ex)
+                    { "Red", "#FF5733" },
+                    { "Green", "#33FF57" },
+                    { "Yellow", "#FFFF00" },
+                    { "Purple", "#800080" },
+                    { "Indigo", "#4B0082" },
+                    { "Blue", "#0000FF" },
+                    { "Orange", "#FFA500" },
+                    { "Brown", "#964B00" }
+                };
+
+            foreach (ListItem item in OptionsList.Items)
             {
-                LogError(ex.Message);
-                return -1;
+                string optionValue = item.Value;
+
+                if (optionColors.ContainsKey(optionValue))
+                {
+                    string color = optionColors[optionValue];
+
+                    item.Attributes.CssStyle.Add("background-color", color);
+                    item.Attributes.CssStyle.Add("color", "white");
+                    item.Attributes.CssStyle.Add("text-shadow", "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000");
+                }
+
+                item.Attributes.CssStyle.Add("border", "1px solid black");
+                item.Attributes.CssStyle.Add("padding", "10px");
+                item.Attributes.CssStyle.Add("margin-bottom", "2%");
+                item.Attributes.CssStyle.Add("width", "150px");
+                item.Attributes.CssStyle.Add("border-radius", "5px");
+                item.Attributes.CssStyle.Add("display", "block");
             }
         }
 
-        private static void LogError(string message)
+
+
+        protected void donebtn_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine($"Error: {message}");
+            Response.Redirect("/Learn.aspx");
         }
-
-        protected void hiddenscore_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
-
 }

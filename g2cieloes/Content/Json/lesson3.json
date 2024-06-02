@@ -1,0 +1,73 @@
+[
+  {
+    "id": 0,
+    "question": "What shape do you see?",
+    "options": [ "circle", "square", "triangle", "rectangle" ],
+    "correct": "circle",
+    "picture": "lesson_images/Circle1.png"
+  },
+  {
+    "id": 1,
+    "question": "What shape do you see?",
+    "options": [ "circle", "square", "triangle", "rectangle" ],
+    "correct": "square",
+    "picture": "lesson_images/square.png"
+  },
+  {
+    "id": 2,
+    "question": "What shape do you see?",
+    "options": [ "circle", "square", "triangle", "rectangle" ],
+    "correct": "triangle",
+    "picture": "lesson_images/triangle.png"
+  },
+  {
+    "id": 3,
+    "question": "What shape do you see?",
+    "options": [ "circle", "square", "triangle", "rectangle" ],
+    "correct": "rectangle",
+    "picture": "lesson_images/rectangle.png"
+  },
+  {
+    "id": 4,
+    "question": "What shape do you see?",
+    "options": [ "circle", "star", "triangle", "rectangle" ],
+    "correct": "star",
+    "picture": "lesson_images/star.png"
+  },
+  {
+    "id": 5,
+    "question": "What shape do you see in the Picture?",
+    "options": [ "circle", "Heart", "triangle", "rectangle" ],
+    "correct": "Heart",
+    "picture": "lesson_images/Heart1.png"
+  },
+  {
+    "id": 6,
+    "question": "What shape do you see?",
+    "options": [ "circle", "pentagon", "triangle", "rectangle" ],
+    "correct": "pentagon",
+    "picture": "lesson_images/pentagon.png"
+  },
+  {
+    "id": 7,
+    "question": "What shape do you see?",
+    "options": [ "circle", "hexagon", "triangle", "rectangle" ],
+    "correct": "hexagon",
+    "picture": "lesson_images/hexagon.png"
+  },
+  {
+    "id": 8,
+    "question": "What shape do you see?",
+    "options": [ "circle", "octagon", "triangle", "rectangle" ],
+    "correct": "octagon",
+    "picture": "lesson_images/octagon.png"
+  },
+  {
+    "id": 9,
+    "question": "What shape do you see?",
+    "options": [ "diamond", "hexagon", "triangle", "rectangle" ],
+    "correct": "diamond",
+    "picture": "lesson_images/diamond.png"
+  }
+]
+

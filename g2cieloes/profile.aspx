@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="g2cieloes.profile" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="profile.aspx.cs" EnableEventValidation="false" Inherits="g2cieloes.profile" %>
 
 <!DOCTYPE html>
 

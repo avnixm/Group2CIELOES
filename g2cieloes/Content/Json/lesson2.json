@@ -1,0 +1,73 @@
+[
+  {
+    "id": 0,
+    "question": "What color is a banana?",
+    "options": [ "Red", "Green", "Yellow", "Purple" ],
+    "correct": "Yellow",
+    "picture": "lesson_images/BANANA.jpg"
+  },
+  {
+    "id": 1,
+    "question": "What color is an apple?",
+    "options": [ "Orange", "Blue", "Yellow", "Red" ],
+    "correct": "Red",
+    "picture": "lesson_images/apple.jpg"
+  },
+  {
+    "id": 2,
+    "question": "What color is a Blueberry?",
+    "options": [ "Green", "Blue", "Orange", "Indigo" ],
+    "correct": "Blue",
+    "picture": "lesson_images/blueberry.jpg"
+  },
+  {
+    "id": 3,
+    "question": "What color is an Orange?",
+    "options": [ "Yellow", "Red", "Orange", "Purple" ],
+    "correct": "Orange",
+    "picture": "lesson_images/Orange.jpg"
+  },
+  {
+    "id": 4,
+    "question": "What color is a grape?",
+    "options": [ "Purple", "Red", "Brown", "Yellow" ],
+    "correct": "Purple",
+    "picture": "lesson_images/Grapes.jpg"
+  },
+  {
+    "id": 5,
+    "question": "What color is a lemon?",
+    "options": [ "Green", "Yellow", "Blue", "Purple" ],
+    "correct": "Yellow",
+    "picture": "lesson_images/Lemon.jpg"
+  },
+  {
+    "id": 6,
+    "question": "What color is a strawberry?",
+    "options": [ "Red", "Blue", "Yellow", "Green" ],
+    "correct": "Red",
+    "picture": "lesson_images/strawberry.jpg"
+  },
+  {
+    "id": 7,
+    "question": "What color is a mango outside?",
+    "options": [ "Orange", "Blue", "Green", "Indigo" ],
+    "correct": "Green",
+    "picture": "lesson_images/Mango.jpg"
+  },
+  {
+    "id": 8,
+    "question": "What color is a watermelon on the outside?",
+    "options": [ "Red", "Green", "Yellow", "Purple" ],
+    "correct": "Green",
+    "picture": "lesson_images/watermelon.jpg"
+  },
+  {
+    "id": 9,
+    "question": "What color is a cherry?",
+    "options": [ "Red", "Green", "Blue", "Brown" ],
+    "correct": "Red",
+    "picture": "lesson_images/cherry.jpg"
+  }
+]
+

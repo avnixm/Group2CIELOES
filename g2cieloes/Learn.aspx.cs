@@ -81,7 +81,10 @@ namespace g2cieloes
             }
         }
 
-
+        protected void Button3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("lessons/lesson4.aspx");
+        }
     }
 }
     
