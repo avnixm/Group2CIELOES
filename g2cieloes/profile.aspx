@@ -6,129 +6,12 @@
 
 <head runat="server">
     <link rel="stylesheet" href="Content/homepage.css" />
-    <link rel="stylesheet" href="Content/profile.css" />
+    <link rel="stylesheet" href="Content/profile1.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="~/faks.svg" rel="shortcut icon" type="image/x-icon" />
     <title>Profile</title>
 </head>
-
-    <style>
-        #p_username {
-            position:relative;
-            margin-left: 30px;
-        }
-       
-        #ctr {
-            position: absolute;
-            margin-left: 130px;
-            margin-top: 40px;
-        }
-
-        .account {
-            background-color:#f5f8f4;
-            height: 400px;
-            width: 890px;
-            position: absolute;
-            right: 10px;
-            top: 110%;
-        }
-
-        #acct{
-            font-weight: 900;
-        }
-
-        /* Custom TextBox Styles */
-        .custom-textbox {
-            background-color: var(--background);
-            border: none;
-            width: 50%;
-            border-radius: 1rem;
-            padding: 10px;
-            border: 1px solid grey;
-            margin-bottom: 15px;
-            margin-left: 200px;
-            margin-top: 20px;
-            font-size: 20px;
-        }
-
-        .lbusername {
-            margin-top: 35px;
-            margin-left: 120px;
-            font-weight: 500;
-            font-size:large;
-        }
-
-        .lbname {
-            position:absolute;
-            margin-top: 115px;
-             margin-left: -523px;
-             font-weight: 500;
-            font-size:large;
-        }
-
-        #namelb{
-            font-weight: bold;
-        }
-
-        #savebtn{
-            position: absolute;
-            color: #fff;
-            background-color: var(--primary);
-            width: 100px;
-            border-radius: 16px;
-            border: 1px solid var(--accent);
-            border-bottom: 4px solid #248627bd;
-            margin: 10px;
-            transition: all 0.1s;
-            padding: 15px 15px;
-            cursor: pointer;
-            border-radius: 1rem;
-            justify-content: center;
-            align-items: center;
-            margin-left: 40px;
-            margin-top: -120px;
-        }
-
-        #savebtn:hover {
-            color: var(--text);
-            background-color: var(--secondary);
-            border-color: #4c8128;
-        }
-
-        #savebtn:active {
-            border-bottom: 2px solid #4c8128;
-        }
-
-        #logoutbtn{
-            color: #fff;
-            background-color: var(--primary);
-            position: absolute;
-            width: 100px;
-            border-radius: 16px;
-            border: 1px solid var(--accent);
-            border-bottom: 4px solid #248627bd;
-            transition: all 0.1s;
-            padding: 15px 15px;
-            cursor: pointer;
-            border-radius: 1rem;
-            justify-content: center;
-            align-items: center;
-            margin-left: 200px;
-            margin-top:250px;
-            position: absolute; 
-        }
-
-        #logoutbtn:hover {
-            color: var(--text);
-            background-color: var(--secondary);
-            border-color: #4c8128;
-        }
-
-        #logoutbtn:active {
-            border-bottom: 2px solid #4c8128;
-        }
-    </style>
 
 <body>
     <form id="mainForm" runat="server">
@@ -171,8 +54,12 @@
 
                     <div class="rank">
                         <div class="rkdv">
-                            <p id="ctr">Current Rank</p>
+                        <div class="trophy-container">
+                            <i class="fas fa-trophy"></i>
+                            <asp:Label ID="ctr" runat="server" Text="" Font-Size="X-Large" Font-Bold="True"></asp:Label>
                         </div>
+                    </div>
+
                     </div>
                     <br />
                     <asp:Label ID="firstnamelabel" runat="server" Text="Name" Font-Bold="True" style="margin-top: 10%;font-size: 2rem;"></asp:Label>
@@ -180,12 +67,6 @@
                     <asp:Label ID="datejoinedlabel" runat="server" Text="Date Joined" style="margin-top:10%;"></asp:Label>
 
                     <h2 id="statistics"></h2>
-                    <div class="daystreak">
-                        <div class="streak-sts">
-                            <p id="tsp">Total Streak</p>
-                        </div>
-                        <p id="tspdb">get from database</p>
-                    </div>
 
                     <div class="account">
                         <h2 id="acct">Account</h2>
@@ -297,7 +178,7 @@
 
         function saveChanges() {
             var newEmail = $('#<%= p_username.ClientID %>').val();
-     var newName = $('#<%= p_name.ClientID %>').val();
+            var newName = $('#<%= p_name.ClientID %>').val();
             $.ajax({
                 type: "POST",
                 url: "profile.aspx/SaveChanges",
@@ -316,8 +197,8 @@
                     alert('AJAX error: ' + error);
                 }
             });
-     return false; // Prevent the default postback
- }
+            return false; // Prevent the default postback
+        }
     </script>
 </body>
 </html>

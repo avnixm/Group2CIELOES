@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../Content/lesson2.css" />
     <title>Fruit Color Quiz</title>
    
@@ -13,7 +13,7 @@
 
     <script>
     let answers = [];
-    let resultsShown = false; // Add a flag to track if results have been shown
+    let resultsShown = false;
 
     function showNextQuestion(currentIndex, answer) {
         console.log(`Question ${currentIndex + 1}: ${answer}`);
@@ -25,7 +25,7 @@
         } else {
             document.querySelector('.done-message').style.display = 'block';
             questions[currentIndex].classList.remove('active');
-            showFinalResults(); // Automatically show results
+            showFinalResults(); 
         }
     }
 
@@ -44,36 +44,15 @@
         return score;
     }
 
-    function submitResults(score) {
-        console.log("Submitting score:", score);
-
-        fetch('lesson2.aspx/SubmitResults', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ score: score, userId: '@userId' })
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('XP updated successfully!');
-                } else {
-                    alert('Failed to update XP: ' + data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred: ' + error.message);
-            });
-    }
 
     function showFinalResults() {
         if (!resultsShown) { // Check if results have already been shown
             const score = showResults();
             document.querySelector('.results').style.display = 'block';
             document.querySelector('.button-result').style.display = 'flex'; // Show the button-result div
-            submitResults(score);
+
+            document.getElementById('<%= hiddenscore.ClientID %>').value = score;
+
             resultsShown = true; // Set the flag to true after showing results
         } else {
             alert('Results have already been shown and XP updated.');
@@ -86,6 +65,8 @@
 
 <body>
     <form id="form1" runat="server">
+
+        <asp:HiddenField ID="hiddenscore" runat="server" />
         <div class="question active">
         <h1>What color is a banana?</h1>
         <img src="lesson images/BANANA.jpg" alt="Banana" class="fruit-image">
@@ -189,7 +170,7 @@
         <p class="done-message">You've answered all the questions. See your score below.</p>
         <div class="results"></div>
         <div class="button-result">
-           <button type="button" class="button" onclick="goToDashboard()">Go to Dashboard</button>
+            <asp:Button ID="gotodashboard" class="button" type="button" runat="server" Text="Back to Dashboard" />
         </div>
     </form>
 </body>

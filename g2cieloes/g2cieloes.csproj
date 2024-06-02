@@ -190,7 +190,7 @@
     <Content Include="Content\leaderboard1.css" />
     <Content Include="Content\mediaqueries.css" />
     <Content Include="Content\practice.css" />
-    <Content Include="Content\profile.css" />
+    <Content Include="Content\profile1.css" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\shop.css" />
     <Content Include="Content\signup.css" />
@@ -202,6 +202,45 @@
     <Content Include="Content\Json\wordoftheday.json" />
     <Content Include="leaderboards.aspx" />
     <Content Include="Learn.aspx" />
+    <Content Include="lessons\lesson images\apple.jpg" />
+    <Content Include="lessons\lesson images\BANANA.jpg" />
+    <Content Include="lessons\lesson images\Bear.jpg" />
+    <Content Include="lessons\lesson images\blueberry.jpg" />
+    <Content Include="lessons\lesson images\Cat.jpg" />
+    <Content Include="lessons\lesson images\cherry.jpg" />
+    <Content Include="lessons\lesson images\circle.jpg" />
+    <Content Include="lessons\lesson images\Circle1.png" />
+    <Content Include="lessons\lesson images\diamond.png" />
+    <Content Include="lessons\lesson images\Dog.jpg" />
+    <Content Include="lessons\lesson images\Elephant.jpg" />
+    <Content Include="lessons\lesson images\Giraffe.jpg" />
+    <Content Include="lessons\lesson images\Grapes.jpg" />
+    <Content Include="lessons\lesson images\heart.png" />
+    <Content Include="lessons\lesson images\Heart1.png" />
+    <Content Include="lessons\lesson images\hexagon.png" />
+    <Content Include="lessons\lesson images\kiwi.jpg" />
+    <Content Include="lessons\lesson images\Lemon.jpg" />
+    <Content Include="lessons\lesson images\Lion.jpg" />
+    <Content Include="lessons\lesson images\Mango.jpg" />
+    <Content Include="lessons\lesson images\Monkey.jpg" />
+    <Content Include="lessons\lesson images\octagon.png" />
+    <Content Include="lessons\lesson images\Orange.jpg" />
+    <Content Include="lessons\lesson images\oval.png" />
+    <Content Include="lessons\lesson images\PENGUIN.jpg" />
+    <Content Include="lessons\lesson images\pentagon.png" />
+    <Content Include="lessons\lesson images\Rabbit.jpg" />
+    <Content Include="lessons\lesson images\rectangle.png" />
+    <Content Include="lessons\lesson images\square.png" />
+    <Content Include="lessons\lesson images\star.png" />
+    <Content Include="lessons\lesson images\stawberry.jpg" />
+    <Content Include="lessons\lesson images\triangle.png" />
+    <Content Include="lessons\lesson images\watermelon.jpg" />
+    <Content Include="lessons\lesson images\watermelonn.jpg" />
+    <Content Include="lessons\lesson images\ZEBRA.jpg" />
+    <Content Include="lessons\lesson2.aspx" />
+    <Content Include="lessons\lesson3.aspx" />
+    <Content Include="lessons\lesson4.aspx" />
+    <Content Include="lessons\update-xp.aspx" />
     <Content Include="login.aspx" />
     <Content Include="practice.aspx" />
     <Content Include="profile.aspx" />
@@ -346,6 +385,34 @@
     </Compile>
     <Compile Include="Learn.aspx.designer.cs">
       <DependentUpon>Learn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lessons\lesson2.aspx.cs">
+      <DependentUpon>lesson2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lessons\lesson2.aspx.designer.cs">
+      <DependentUpon>lesson2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lessons\lesson3.aspx.cs">
+      <DependentUpon>lesson3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lessons\lesson3.aspx.designer.cs">
+      <DependentUpon>lesson3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lessons\lesson4.aspx.cs">
+      <DependentUpon>lesson4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lessons\lesson4.aspx.designer.cs">
+      <DependentUpon>lesson4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lessons\update-xp.aspx.cs">
+      <DependentUpon>update-xp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lessons\update-xp.aspx.designer.cs">
+      <DependentUpon>update-xp.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

@@ -15,6 +15,24 @@ namespace g2cieloes
     {
 
         /// <summary>
+        /// mainForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm mainForm;
+
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
         /// userxplabel control.
         /// </summary>
         /// <remarks>
@@ -51,6 +69,15 @@ namespace g2cieloes
         protected global::System.Web.UI.HtmlControls.HtmlAnchor profileLink;
 
         /// <summary>
+        /// ctr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ctr;
+
+        /// <summary>
         /// firstnamelabel control.
         /// </summary>
         /// <remarks>
@@ -67,6 +94,33 @@ namespace g2cieloes
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label datejoinedlabel;
+
+        /// <summary>
+        /// p_username control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox p_username;
+
+        /// <summary>
+        /// p_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox p_name;
+
+        /// <summary>
+        /// savebtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button savebtn;
 
         /// <summary>
         /// logoutbtn control.

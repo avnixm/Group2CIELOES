@@ -67,7 +67,7 @@ namespace g2cieloes
 
         private void UpdateUserHeartsInDatabase(int userID, int user_hearts)
         {
-            string connectionString = "Server=localhost;user=root;database=g2cieloes;password=";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
@@ -80,6 +80,8 @@ namespace g2cieloes
                 }
             }
         }
+
+
     }
 }
     

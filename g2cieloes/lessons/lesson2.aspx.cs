@@ -55,7 +55,7 @@ namespace g2cieloes.lessons
 
         private static bool UpdateXp(int score, string userId)
         {
-            string connectionString = "Server=localhost;user=root;database=g2cieloes;password=";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -77,7 +77,7 @@ namespace g2cieloes.lessons
 
         private static int GetUserXp(string userId)
         {
-            string connectionString = "Server=localhost;user=root;database=g2cieloes;password=";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -100,6 +100,13 @@ namespace g2cieloes.lessons
         {
             System.Diagnostics.Debug.WriteLine($"Error: {message}");
         }
+
+        protected void hiddenscore_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 
 }

@@ -28,7 +28,7 @@ div[style*="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; botto
     margin: 10px;
 }
 
-   
+
 
 
 .avatardv {
@@ -158,25 +158,34 @@ div[style*="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; botto
     border-radius: 20px;
     border: 2px solid grey;
     left: 50%;
-    top: 45%;
+    top: 20%;
 }
 
 .rkdv {
+    display: flex;
+    align-items: center;
     background-image: url(/images/icons/leaderboardcolor.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35px;
-    width: 35px;
+    height: 100px;
+    width: 100%;
     margin: 9px;
     margin-left: 20px;
     margin-top: 20px;
+    border-radius: 20px;
 }
 
+    .rkdv i {
+        font-size: 2rem;
+        color: gold;
+        margin-right: 10px; /* Adjust the spacing between the icon and the label */
+    }
+
 #ctr {
-    position: absolute;
-    margin-left: 130px;
-    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
+
 
 /*********************** Account Div ***********************/
 .account {
@@ -211,9 +220,9 @@ div[style*="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; botto
     z-index: 999;
 }
 
-#closebtn{
+#closebtn {
     font-weight: 500;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     color: #fff;
     background-color: var(--primary);
@@ -230,15 +239,15 @@ div[style*="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; botto
     align-items: center;
 }
 
-#closebtn:hover {
-    color: var(--text);
-    background-color: var(--secondary);
-    border-color: #4c8128;
-}
+    #closebtn:hover {
+        color: var(--text);
+        background-color: var(--secondary);
+        border-color: #4c8128;
+    }
 
-#closebtn:active {
-    border-bottom: 2px solid #4c8128;
-}
+    #closebtn:active {
+        border-bottom: 2px solid #4c8128;
+    }
 
 .modal-content {
     background: #fff;
@@ -253,3 +262,125 @@ div[style*="opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; botto
     }
 
 
+#p_username {
+    position: relative;
+    margin-left: 30px;
+}
+
+#ctr {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: -40px;
+}
+
+.rkdv i {
+    position: absolute;
+    font-size: 2rem;
+    color: gold;
+    margin-left: 60px;
+    margin-top: -40px;
+}
+
+.account {
+    background-color: #f5f8f4;
+    height: 400px;
+    width: 890px;
+    position: absolute;
+    right: 10px;
+    top: 110%;
+}
+
+#acct {
+    font-weight: 900;
+}
+
+/* Custom TextBox Styles */
+.custom-textbox {
+    background-color: var(--background);
+    border: none;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.lbusername {
+    margin-top: 35px;
+    margin-left: 120px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.lbname {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: -523px;
+    font-weight: 500;
+    font-size: large;
+}
+
+#namelb {
+    font-weight: bold;
+}
+
+#savebtn {
+    position: absolute;
+    color: #fff;
+    background-color: var(--primary);
+    width: 100px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    border-bottom: 4px solid #248627bd;
+    margin: 10px;
+    transition: all 0.1s;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: -120px;
+}
+
+    #savebtn:hover {
+        color: var(--text);
+        background-color: var(--secondary);
+        border-color: #4c8128;
+    }
+
+    #savebtn:active {
+        border-bottom: 2px solid #4c8128;
+    }
+
+#logoutbtn {
+    color: #fff;
+    background-color: var(--primary);
+    position: absolute;
+    width: 100px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    border-bottom: 4px solid #248627bd;
+    transition: all 0.1s;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 250px;
+    position: absolute;
+}
+
+    #logoutbtn:hover {
+        color: var(--text);
+        background-color: var(--secondary);
+        border-color: #4c8128;
+    }
+
+    #logoutbtn:active {
+        border-bottom: 2px solid #4c8128;
+    }

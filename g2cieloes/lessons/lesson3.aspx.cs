@@ -29,7 +29,7 @@ namespace g2cieloes
         [WebMethod]
         public static object UpdateXP(int UserXP, int userId)
         {
-            string connectionString = "Server=localhost;Database=g2cieloes;user=root;Password=;";
+            string connectionString = "Server=MYSQL8010.site4now.net;Database=db_aa8eff_g2ciel;Uid=aa8eff_g2ciel;Pwd=g2cieloes";
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
