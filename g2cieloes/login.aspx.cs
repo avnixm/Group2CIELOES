@@ -9,14 +9,7 @@ namespace g2cieloes
     public partial class login : System.Web.UI.Page
     {
 
-      protected void GoogleLoginButton_Click(object sender, EventArgs e)
-        {
-            Context.GetOwinContext().Authentication.Challenge(new AuthenticationProperties
-            {
-                RedirectUri = "/GoogleCallback.aspx"
-            }, "Google");
-        }
-
+     
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -104,27 +97,83 @@ namespace g2cieloes
         }
 
 
-        
-        protected void googleLogin_Click(object sender, EventArgs e)
+               private string GetGoogleAuthorizationUrl()
         {
-            Response.Redirect(GetGoogleAuthorization());
+            string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
+            string redirectUri = Server.UrlEncode("https://cieloes.me/Learn");
+            string scope = "email profile openid";
+        
+            string url = $"https://accounts.google.com/o/oauth2/auth?" +
+                         $"client_id={clientId}&" +
+                         $"redirect_uri={redirectUri}&" +
+                         $"scope={scope}&" +
+                         $"response_type=code&" +
+                         $"state={Guid.NewGuid()}";
+        
+            return url;
         }
-
-      private string GetGoogleAuthorization()
-{
-        string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
-        string redirectUri = Server.UrlEncode("https://cieloes.me/Learn"); // Ensure correct redirect URI
-
-        string scope = "email profile openid";
-
-        string url = $"https://accounts.google.com/o/oauth2/auth?" +
-                 $"client_id={clientId}&" +
-                 $"redirect_uri={redirectUri}&" +
-                 $"scope={scope}&" +
-                 $"response_type=code&" +
-                 $"state={state}";
-    return url;
+        
+        protected void GoogleLoginButton_Click(object sender, EventArgs e)
+        {
+            string authorizationUrl = GetGoogleAuthorizationUrl();
+            Response.Redirect(authorizationUrl);
+        }
+        
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Request.QueryString["code"]!= null)
+            {
+                string code = Request.QueryString["code"];
+                string redirectUri = "https://cieloes.me/Learn";
+                string tokenUrl = "https://oauth2.googleapis.com/token";
+                string clientId = "744603473685-6m4rravomvk26ag85d7q4jh42d91am6v.apps.googleusercontent.com";
+                string clientSecret = "YOUR_CLIENT_SECRET";
+        
+                using (var client = new WebClient())
+                {
+                    var request = new NameValueCollection();
+                    request["code"] = code;
+                    request["redirect_uri"] = redirectUri;
+                    request["grant_type"] = "authorization_code";
+                    request["client_id"] = clientId;
+                    request["client_secret"] = clientSecret;
+        
+                    var response = client.UploadValues(tokenUrl, "POST", request);
+                    var responseString = Encoding.Default.GetString(response);
+        
+                    var tokenResponseParts = responseString.Split('&');
+                    string accessToken = null;
+                    string expiresIn = null;
+        
+                    foreach (var part in tokenResponseParts)
+                    {
+                        var keyValue = part.Split('=');
+                        if (keyValue[0] == "access_token")
+                        {
+                            accessToken = keyValue[1];
+                        }
+                        else if (keyValue[0] == "expires_in")
+                        {
+                            expiresIn = keyValue[1];
+                        }
+                    }
+        
+                    if (!string.IsNullOrEmpty(accessToken))
+                    {
+                        // Use the access token to authenticate the user
+                        // You can use the token to call Google APIs or validate the user's identity
+                        // For this example, we'll just redirect the user to the Learn page
+                        Response.Redirect("Learn.aspx");
+                    }
+                    else
+                    {
+                        // Handle the error
+                        Response.Write("Error authenticating with Google");
+                    }
+                }
+            }
+        }
+   }
 }
 
-    }
-}
+
