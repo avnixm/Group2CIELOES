@@ -12,7 +12,7 @@ namespace g2cieloes
             var authResult = HttpContext.Current.GetOwinContext().Authentication.AuthenticateAsync("ExternalCookie").Result;
             if (authResult != null)
             {
-                // Extract user info from authResult
+             
                 var identity = authResult.Identity;
                 var emailClaim = identity.FindFirst(System.Security.Claims.ClaimTypes.Email);
 
@@ -20,8 +20,8 @@ namespace g2cieloes
                 {
                     string email = emailClaim.Value;
 
-                    // Use the email to find or create a user in your database
-                    // Redirect to home page or authenticated area
+                 
+                    
                     Response.Redirect("learn.aspx");
                 }
             }
