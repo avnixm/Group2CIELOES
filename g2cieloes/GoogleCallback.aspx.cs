@@ -22,7 +22,7 @@ namespace g2cieloes
 
                     // Use the email to find or create a user in your database
                     // Redirect to home page or authenticated area
-                    Response.Redirect("home.aspx");
+                    Response.Redirect("learn.aspx");
                 }
             }
             else
